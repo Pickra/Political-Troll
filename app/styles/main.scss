@@ -25,6 +25,23 @@ body {
     }
 }
 
+
+
+/////////    BUTTONS    /////////
+
+button {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    background: linear-gradient(to bottom, #FBDE00 0%,#E5A700 100%);
+    border-radius: 8px;
+    border: 1px solid #BD7E1F;
+    box-shadow: inset 0px 1px 0px #FFF7B2, 0px 2px 7px 0px #C8C8CB;
+    display: inline-block;
+    margin:0px;
+}
+
+
 /*  BROWSEHAPPY */
 .browsehappy {
     margin: 0.2em 0;
