@@ -1,5 +1,5 @@
  
- var current-members =  [
+ var currentMembers =  [
   {
    "congress_numbers": [
     112, 
@@ -22538,4 +22538,4 @@
    "title_long": "Senator", 
    "website": "http://www.markey.senate.gov"
   }
- ]
+]
