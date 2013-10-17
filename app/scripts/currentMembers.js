@@ -1,5 +1,5 @@
  
- var current-Members =  [
+ var current-members =  [
   {
    "congress_numbers": [
     112, 
