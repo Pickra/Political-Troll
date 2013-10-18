@@ -1,10 +1,12 @@
 /*global describe, it */
 'use strict';
 (function () {
-    describe('Give it some context', function () {
-        describe('maybe a bit more context here', function () {
-            it('should run here few assertions', function () {
+    describe('The Politi-Troll App', function () {
+        describe('has a View-A', function () {
+            it('that has an input', function () {
+            	var input
 
+            	input.should.to.be.true;
             });
         });
     });

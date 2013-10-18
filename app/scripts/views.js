@@ -4,6 +4,10 @@ ViewA = Backbone.View.extend({
 	
 	classname: 'viewA',
 
+	events:{
+		'click .button'   :   'getRepresentative'
+	},
+
 	initialize: function(){
 		$('.main').append(this.el)
 		this.render()
@@ -13,11 +17,7 @@ ViewA = Backbone.View.extend({
 		this.$el.append(this.template())
 	}, 
 
-	events:{
-		'click button'   :   'button'
-	},
-
-	button: function(){
+	getRepresentative: function(){
 		// sends a query to the server based on the input value
 		// .get input.val()
 	}
