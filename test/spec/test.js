@@ -4,7 +4,7 @@
     describe('The Politi-Troll App', function () {
         describe('has a View-A', function () {
             it('that has an input', function () {
-            	var input
+            	var input = ('input');
 
             	input.should.to.be.true;
             });
