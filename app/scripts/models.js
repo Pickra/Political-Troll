@@ -1,6 +1,6 @@
 Politician = Backbone.Model.extend(){
 	initialize: function(){
-		console.log('a politician was made!!!!')
+		console.log('politician was made!!!!')
 	},
 
 	defaults:{
@@ -8,5 +8,25 @@ Politician = Backbone.Model.extend(){
 		id:'',
 		photo:''
 
+	}
+}
+
+Bill = Backbone.Model.extend(){
+
+	initialize: function() {
+		console.log('bill was made!!!!')
+	},
+
+	defaults:{
+
+		id:'',
+		link:''
+	}
+
+}
+
+ModelA = Backbone.Model.extend(){
+	initialize: function(){
+		console.log('model-A was made!!!!!!!!')
 	}
 }
