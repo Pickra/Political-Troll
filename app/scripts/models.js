@@ -1,4 +1,4 @@
-Politician = Backbone.Model.extend(){
+var Politician = Backbone.Model.extend(){
 	initialize: function(){
 		console.log('politician was made!!!!')
 	},
@@ -11,7 +11,7 @@ Politician = Backbone.Model.extend(){
 	}
 }
 
-Bill = Backbone.Model.extend(){
+var Bill = Backbone.Model.extend(){
 
 	initialize: function() {
 		console.log('bill was made!!!!')
@@ -25,8 +25,8 @@ Bill = Backbone.Model.extend(){
 
 }
 
-ModelA = Backbone.Model.extend(){
+var ModelA = Backbone.Model.extend(){
 	initialize: function(){
-		console.log('model-A was made!!!!!!!!')
+		console.log('model-A was made!!!!!!!!	')
 	}
 }

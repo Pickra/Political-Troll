@@ -1,31 +1,21 @@
-ViewA = Backbone.View.extend({
+var ViewA = Backbone.View.extend({
 	template:_.template($('view-A-template').text()),
 	
 	tagName: 'div',
 	
 	classname: 'viewA',
 
-	events:{
-		'click .button'   :   'getPolitician'
-	},
-
 	initialize: function(){
 		$('.views').html('');
-		$('.views').append(this.el);/*unnecessary here...*/
 		this.render()
 	},
 
 	render: function(){
 		this.$el.append(this.template()) /*and here?*/
 	}, 
-
-	getPolitician: function(){
-		// sends a query to the server based on the input value
-		// .get input.val()
-	}
 })
 
-BillView = Backbone.View.extend({
+var BillView = Backbone.View.extend({
 
 	template:_.template($('bill-template').text()),
 
@@ -35,7 +25,6 @@ BillView = Backbone.View.extend({
 
 	initialize: function(){
 		$('.views').html('');
-		$('.views').append(this.el);
 		this.render()
 	},
 
@@ -45,7 +34,7 @@ BillView = Backbone.View.extend({
 
 })
 
-PoliticianView = Backbone.View.extend({
+var PoliticianView = Backbone.View.extend({
 
 	template:_.template($('bill-template').text()),
 
@@ -55,7 +44,6 @@ PoliticianView = Backbone.View.extend({
 
 	initialize: function(){
 		$('.views').html('');
-		$('.views').append(this.el);
 		this.render()
 	},
 
