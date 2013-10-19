@@ -6,12 +6,12 @@ var ViewA = Backbone.View.extend({
 	classname: 'viewA',
 
 	initialize: function(){
-		$('.views').html('');
-		this.render()
+		$('.main').html('');
+		this.render();
 	},
 
 	render: function(){
-		this.$el.append(this.template()) /*and here?*/
+		this.$el.append(this.template());
 	}, 
 })
 
@@ -24,12 +24,12 @@ var BillView = Backbone.View.extend({
 	classname: 'billView',
 
 	initialize: function(){
-		$('.views').html('');
-		this.render()
+		// $('.views').html('');
+		this.render();
 	},
 
 	render: function(){
-		this.$el.append(this.template())
+		this.$el.append(this.template());
 	}, 	
 
 })
@@ -43,11 +43,11 @@ var PoliticianView = Backbone.View.extend({
 	classname: 'politicianView',
 
 	initialize: function(){
-		$('.views').html('');
-		this.render()
+		// $('.views').html('');
+		this.render();
 	},
 
 	render: function(){
-		this.$el.append(this.template())
+		this.$el.append(this.template());
 	}, 	
 })

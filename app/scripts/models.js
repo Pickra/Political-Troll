@@ -6,8 +6,9 @@ var Politician = Backbone.Model.extend(){
 	defaults:{
 		person:'',
 		id:'',
-		photo:''
-
+		photo:'',
+		state: '',
+		district: ''
 	}
 }
 

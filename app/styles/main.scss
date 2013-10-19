@@ -8,30 +8,55 @@ body {
 
 .main {
     margin: 20px auto 0 auto;
-    width: 300px;
+    width: 1100px;
     font-size: 18px;
     line-height: 30px;
     background-color: #eee;
     border-radius: 6px;
+    display: inline-block;
+}
+.head-wrap {
+    margin: 40px 500px 0;
 
     .title {
-        margin: 0 35%;
+        margin: 0 8px 0;
+        display: block;
     }
 
     img {
         height: 100px;
         width: 100px;
-        margin: 0 33%;
+        display: block;
+    }
+}
+
+.views {
+    margin: 50px 100px 0px;
+    text-align: center;
+}
+
+.foot-wrap {
+    display: inline-block;
+    img {
+        display: inline-block;
     }
 }
 
 
 
+
+
+.big-pic {
+    height: 200px;
+    width: 200px;
+}
+
+
 /////////    BUTTONS    /////////
 
 .button {
-    width: 100px;
-    height: 50px;
+    width: 75px;
+    height: 30px;
     text-align: center;
     background: linear-gradient(to bottom, #FBDE00 0%,#E5A700 100%);
     border-radius: 8px;

@@ -24,20 +24,81 @@
 
 <!-- ------------------ CONTAINERS   ----------------------------------- -->
         <div class="main">
-            <span class="title">Politi-Troll</span>
-            <img src="../images/Placeholder-Troll.png">
-            <div class="views"></div>
+            <!-- <div class="head-wrap">
+                <span class="title">Politi-Troll</span>
+                <img src="../images/Placeholder-Troll.png">
+            </div> -->
+
+            
+                
+                <!-- <p>These guys are from <span><%=politician.get('state') %></span>
+                </p>
+                <div class="politician-view">
+                </div>
+                <div class="input-wrap">
+                    <input placeholder="What District?">
+                    <button class="button">Submit</button>
+
+                </div> -->
         </div>
 
 <!-- -----------------  TEMPLATES -------------------------------------->
 
-
+<!-- view-A-template -->
         <script type="text/template" id="view-A-template">
+            <div class="head-wrap">
+                <span class="title">Politi-Troll</span>
+                <img src="../images/Placeholder-Troll.png">
+            </div>
             <p>Welcome! Tell your friendly neighborhood troll which politician you would like to know about, regarding what bills they voted on and how they voted, and he will take care of the rest!</p>
-            <input placeholder="What State is Your Politician In?">
-            <button class="button"></button>
+            <div class="foot-wrap">
+                <input placeholder="What State?">
+                <button class="button">Submit</button>
         </script>
 
+<!-- view-B-template -->
+        <script type="text/template" id="view-B-template">
+            <div class="head-wrap">
+                <span class="title">Politi-Troll</span>
+                <img src="../images/Placeholder-Troll.png">
+            </div>
+            <p>These guys are from<span><%=politician.get('state') %></span>
+            </p>
+            <div class="politician-view">
+            </div>
+            <div class="foot-wrap">
+                <input placeholder="What District?">
+                <button class="button">Submit</button>
+        </script>
+
+<!-- view-C-template -->
+        <script type="text/template" id="view-C-template">
+            <div class="head-wrap">
+                <span class="title">Politi-Troll</span>
+                <img src="../images/Placeholder-Troll.png">
+            </div>
+            <p>Pick your politician from<span><%=politician.get('state') %></span> in District<%= politician.get('district')%>
+            </p>
+            <div class="politician-view">
+            </div>
+
+        </script>
+
+<!-- view-D-template -->
+        <script type="text/template" id="view-D-template">
+        <div class="head-wrap">
+            <span class="title">Politi-Troll</span>
+        </div>
+        <div class="bills"></div>
+        <div class="foot-wrap">
+            <img src="../images/Placeholder-Troll.png">
+            </div>
+            <button class="button">Go Again!</button>
+        </script>
+            
+
+
+            <img class="big-pic" src="<%=politician.get('photo)%>">
 
 <!-- --------------------   SCRIPTS --------------------------------->
         <!-- build:js scripts/vendor.js -->
