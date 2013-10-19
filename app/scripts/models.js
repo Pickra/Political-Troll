@@ -4,9 +4,9 @@ var Politician = Backbone.Model.extend(){
 	},
 
 	defaults:{
-		person:'',
-		id:'',
-		photo:'',
+		name: '',
+		id: '',
+		photo: '',
 		state: '',
 		district: ''
 	}
@@ -19,8 +19,9 @@ var Bill = Backbone.Model.extend(){
 	},
 
 	defaults:{
-		id:'',
-		link:''
+		name: '',
+		id: '',
+		vote: ''
 	}
 
 }

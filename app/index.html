@@ -88,17 +88,28 @@
         <script type="text/template" id="view-D-template">
         <div class="head-wrap">
             <span class="title">Politi-Troll</span>
+            <img class="big-pic" src="<%=politician.get('photo')%>">
+            <span><%=politician.get('name')%></span>
         </div>
-        <div class="bills"></div>
+        <div class="bill-view"></div>
         <div class="foot-wrap">
             <img src="../images/Placeholder-Troll.png">
             </div>
             <button class="button">Go Again!</button>
         </script>
             
+<!-- politician-view -->
+        <script type="text/tem" id="politician-view">
+            <img src="<%=politician.get('photo')%>"
+            <span><%=politician.get('name')%>
+        // party???
+        </script>
 
-
-            <img class="big-pic" src="<%=politician.get('photo)%>">
+<!--  bill-view-->
+        <script type="text/tem" id="bill-view">
+            <span><%=bill.get('name')%>
+            <span><%=bill.get('vote')%>
+        </script>
 
 <!-- --------------------   SCRIPTS --------------------------------->
         <!-- build:js scripts/vendor.js -->
