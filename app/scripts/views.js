@@ -1,5 +1,5 @@
 var ViewA = Backbone.View.extend({
-	template:_.template($('view-A-template').text()),
+	template:_.template($('#view-A-template').text()),
 	
 	tagName: 'div',
 	
@@ -7,6 +7,8 @@ var ViewA = Backbone.View.extend({
 
 	initialize: function(){
 		$('.main').html('');
+		$('.main').append(this.$el)
+		console.log('u initialized viewA yo')
 		this.render();
 	},
 

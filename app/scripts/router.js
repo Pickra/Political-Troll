@@ -1,8 +1,7 @@
+
 var PolitiTrollRouter = Backbone.Router.extend({
 	initialize: function(){
-		// ???? don't need initialize????
-		this.viewA = new ViewA()
-		// ?????
+		console.log('router initialized sucka!')
 	},
 
 	routes: {
@@ -11,8 +10,10 @@ var PolitiTrollRouter = Backbone.Router.extend({
 	},
 
 	viewA: function(){
+		this.viewA = new ViewA()
 		console.log('route to viewA, you did!');
-
-
 	}
 })
+
+router = new PolitiTrollRouter()
+Backbone.history.start()

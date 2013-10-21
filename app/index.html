@@ -98,14 +98,14 @@
             <button class="button">Go Again!</button>
         </script>
             
-<!-- politician-view -->
+<!-- politician-template -->
         <script type="text/tem" id="politician-view">
             <img src="<%=politician.get('photo')%>"
             <span><%=politician.get('name')%>
         // party???
         </script>
 
-<!--  bill-view-->
+<!--  bill-template-->
         <script type="text/tem" id="bill-view">
             <span><%=bill.get('name')%>
             <span><%=bill.get('vote')%>
@@ -133,6 +133,9 @@
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/models.js"></script>
+        <script src="scripts/views.js"></script>
+        <script src="scripts/router.js"></script>
         <!-- endbuild -->
 </body>
 </html>
