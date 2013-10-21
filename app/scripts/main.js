@@ -1,5 +1,7 @@
 $(document).ready(function(){
-$('.chosen').chosen()
+$('.chosen').chosen({
+	width: '150px'
+})
 });
 
 
