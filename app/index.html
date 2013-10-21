@@ -12,6 +12,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/chosen.min.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
@@ -52,7 +53,13 @@
             </div>
             <p>Welcome! Tell your friendly neighborhood troll which politician you would like to know about, regarding what bills they voted on and how they voted, and he will take care of the rest!</p>
             <div class="foot-wrap">
-                <input placeholder="What State?">
+                <select class="chosen" placeholder="What State?">
+                    <option value="1">Alabama</option>
+                    <option value="1">Ur mama</option>
+                    <option value="1">Kintucky</option>
+                    <option value="1">NYC</option>
+
+                </select>
                 <a href="/#B">
                     <button class="button">Submit</button>
                 </a>
@@ -124,7 +131,6 @@
         <script src="bower_components/chosen_v1.0.0/chosen.jquery.js"></script>
         <script src="bower_components/underscore/underscore.js"></script>
         <script src="bower_components/backbone/backbone.js"></script>
-        <script src="scripts/chosen.jquery.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

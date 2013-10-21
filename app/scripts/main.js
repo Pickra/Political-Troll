@@ -1,5 +1,5 @@
 $(document).ready(function(){
-$('#view-A-template').find('input').chosen()
+$('.chosen').chosen()
 });
 
 
