@@ -53,7 +53,10 @@
             <p>Welcome! Tell your friendly neighborhood troll which politician you would like to know about, regarding what bills they voted on and how they voted, and he will take care of the rest!</p>
             <div class="foot-wrap">
                 <input placeholder="What State?">
-                <button class="button">Submit</button>
+                <a href="/#B">
+                    <button class="button">Submit</button>
+                </a>
+            </div>
         </script>
 
 <!-- view-B-template -->
@@ -62,13 +65,16 @@
                 <span class="title">Politi-Troll</span>
                 <img src="../images/Placeholder-Troll.png">
             </div>
-            <p>These guys are from<span><%=politician.get('state') %></span>
+            <p>These guys are from<span>STATE GOES HERE</span>
             </p>
             <div class="politician-view">
             </div>
             <div class="foot-wrap">
                 <input placeholder="What District?">
-                <button class="button">Submit</button>
+                <a href="/#C">
+                    <button class="button">Submit</button>
+                </a>
+            </div>
         </script>
 
 <!-- view-C-template -->
@@ -133,8 +139,8 @@
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
-        <script src="scripts/collections.js"></script>
         <script src="scripts/models.js"></script>
+        <script src="scripts/collections.js"></script>
         <script src="scripts/views.js"></script>
         <script src="scripts/router.js"></script>
         <!-- endbuild -->

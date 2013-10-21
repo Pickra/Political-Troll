@@ -5,13 +5,19 @@ var PolitiTrollRouter = Backbone.Router.extend({
 	},
 
 	routes: {
-	''				: 'viewA'
+	''				: 'viewA',
+	'B'				: 'viewB'
 
 	},
 
 	viewA: function(){
-		this.viewA = new ViewA()
+		this.viewA = new ViewA();
 		console.log('route to viewA, you did!');
+	},
+
+	viewB: function(){
+		this.viewB = new ViewB();
+		console.log('route to viewB, you did!');	
 	}
 })
 

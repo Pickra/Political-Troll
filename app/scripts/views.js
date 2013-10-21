@@ -1,4 +1,5 @@
 var ViewA = Backbone.View.extend({
+	
 	template:_.template($('#view-A-template').text()),
 	
 	tagName: 'div',
@@ -7,15 +8,45 @@ var ViewA = Backbone.View.extend({
 
 	initialize: function(){
 		$('.main').html('');
-		$('.main').append(this.$el)
-		console.log('u initialized viewA yo')
+		$('.main').append(this.$el);
+		console.log('u initialized viewA yo');
 		this.render();
 	},
 
 	render: function(){
 		this.$el.append(this.template());
-	}, 
+	}
 })
+
+
+
+
+
+var ViewB = Backbone.View.extend({
+	
+	template:_.template($('#view-B-template').text()),
+
+	tagname: 'div',
+
+	classname: 'viewB',
+
+	initialize: function(){
+		$('.main').html('');
+		$('.main').append(this.$el);
+		console.log('u initialized viewB yo');
+		this.render();
+	},
+
+	render: function(){
+		this.$el.append(this.template());
+	}
+
+})
+
+
+
+
+
 
 var BillView = Backbone.View.extend({
 
