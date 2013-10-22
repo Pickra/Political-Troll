@@ -6,6 +6,11 @@ var ViewA = Backbone.View.extend({
 	
 	classname: 'viewA',
 
+	events:{
+
+		'change .chosen'			:  'chosen'
+	},
+
 	initialize: function(){
 		$('.main').html('');
 		$('.main').append(this.$el);
@@ -15,6 +20,17 @@ var ViewA = Backbone.View.extend({
 
 	render: function(){
 		this.$el.append(this.template());
+	},
+
+	chosen	: function(){
+// when it changes, get the value
+		console.log('you made a change in chosen!!!!')
+		console.log($('.chosen').val())
+		
+// .get(stateCode:model);
+// create a new state model instance with the value returned from JSON 
+// 	this.value = new State;
+	
 	}
 })
 
