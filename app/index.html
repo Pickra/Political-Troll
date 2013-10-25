@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.tmp) styles/main.css -->
+        <link href='http://fonts.googleapis.com/css?family=Lekton:400,700,400italic|Exo' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/chosen.css">
         <!-- endbuild -->
@@ -24,8 +25,10 @@
         <![endif]-->
 
 <!-- ------------------ CONTAINERS   ----------------------------------- -->
-        <div class="main">
-            
+        <div class="white-house">
+            <div class="main">
+                
+            </div>
         </div>
 
 <!-- -----------------  TEMPLATES -------------------------------------->
@@ -33,10 +36,12 @@
 <!-- view-A-template -->
         <script type="text/template" id="view-A-template">
             <div class="head-wrap">
-                <span class="title">Politi-Troll</span>
-                <img src="../images/Placeholder-Troll.png">
+                <span class="title">Politi Troll</span>
+                
             </div>
-            <p>Welcome! Tell your friendly neighborhood troll which politician you would like to know about, regarding what bills they voted on and how they voted, and he will take care of the rest!</p>
+                
+
+                
             <div class="foot-wrap">
                 <select class="chosen" data-placeholder="Select Your State">
                     <option></option>
@@ -93,19 +98,21 @@
                     <option value="WY">Wyoming</option>
 
                 </select>
+                <img src="../images/Placeholder-Troll.png">
                 <a href="/#B">
                     <button class="button">Submit</button>
                 </a>
+                <p>Welcome! Tell your friendly neighborhood troll which politician you would like to know about, regarding what bills they voted on and how they voted, and he will take care of the rest!</p>
             </div>
         </script>
 
 <!-- view-B-template -->
         <script type="text/template" id="view-B-template">
             <div class="head-wrap">
-                <span class="title">Politi-Troll</span>
+                <span class="title">Politi Troll</span>
                 <img src="../images/Placeholder-Troll.png">
             </div>
-            <p>These guys are from<span>STATE GOES HERE</span>
+            <p>These guys are from<span class="state-goes-here"></span>
             </p>
             <div class="politician-view">
             </div>
@@ -120,7 +127,7 @@
 <!-- view-C-template -->
         <script type="text/template" id="view-C-template">
             <div class="head-wrap">
-                <span class="title">Politi-Troll</span>
+                <span class="title">Politi Troll</span>
                 <img src="../images/Placeholder-Troll.png">
             </div>
             <p>Pick your politician from<span><%=politician.get('state') %></span> in District<%= politician.get('district')%>
@@ -133,7 +140,7 @@
 <!-- view-D-template -->
         <script type="text/template" id="view-D-template">
         <div class="head-wrap">
-            <span class="title">Politi-Troll</span>
+            <span class="title">Politi Troll</span>
             <img class="big-pic" src="<%=politician.get('photo')%>">
             <span><%=politician.get('name')%></span>
         </div>

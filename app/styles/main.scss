@@ -1,33 +1,52 @@
 /*  CONTAINERS */
 
+*{
+    font-family: Lekton, sans-serif;
+    color: rgb(10, 196, 255);
+}
+
 body {
-    background: #fafafa;
+    background: #103F69;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
+    margin: 0;
+    padding: 0;
+
+}
+
+.white-house {
+    background: url("../images/whitehouse.png") no-repeat;
+    background-size: 58%;
+    background-position-x: 260px;
+    background-position-y: -24px;
 }
 
 .main {
-    margin: 20px auto 0 auto;
+    margin: 20px auto;
     width: 1100px;
     font-size: 18px;
     line-height: 30px;
-    background-color: #eee;
+    background-color: rgba(47, 122, 187, 0.5);
     border-radius: 6px;
-    display: inline-block;
+    display: block;
 }
+
 .head-wrap {
     margin: 40px 500px 0;
-
+    
+    
     .title {
-        margin: 0 8px 0;
-        display: block;
+        margin: 20px -100px 0;
+        display: inline-block;
+        font-weight: 900;
+        font-size: 50px;
     }
 
-    img {
-        height: 100px;
-        width: 100px;
-        display: block;
-    }
+    
+}
+
+p {
+    text-align: center;
 }
 
 .views {
@@ -37,13 +56,17 @@ body {
 
 .foot-wrap {
     display: inline-block;
+    margin: 148px 130px 0;
+    padding-bottom: 10px;
+    
+
     img {
+        height: 100px;
+        width: 100px;
         display: inline-block;
+        margin-right: 225px;
     }
 }
-
-
-
 
 
 .big-pic {
@@ -52,29 +75,41 @@ body {
 }
 
 
+.chosen-single span {
+    font-family: sans-serif;
+    color: black;
+}
+
+
 .chosen-container {
-    width: 100px;
+    margin-right: 212px;
 }
 
 /////////    BUTTONS    /////////
 
 .button {
-    width: 75px;
-    height: 30px;
-    text-align: center;
-    background: linear-gradient(to bottom, #FBDE00 0%,#E5A700 100%);
-    border-radius: 8px;
-    border: 1px solid #BD7E1F;
-    box-shadow: inset 0px 1px 0px #FFF7B2, 0px 2px 7px 0px #C8C8CB;
-    display: inline-block;
-    margin:0px;
+   width: 50px;
+   height: 50px;
+   text-align: center;
+   background: rgb(16, 63, 105);
+   border-radius: 25px;
+   border: 1px solid rgb(33, 84, 128);
+   box-shadow: 0px 0px 2px 0px rgb(47, 122, 187);
+   display: inline-block;
+   margin: 0px 0 0px 0;
+   padding: 4px 0 0 0;
+   font-size: 15px;
+}
+
+.button:hover {
+    background: rgb(33, 84, 128);
 }
 
 
 /*  BROWSEHAPPY */
 .browsehappy {
     margin: 0.2em 0;
-    background: #ccc;
+    background:1;
     color: #000;
     padding: 0.2em 0;
 }

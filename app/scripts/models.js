@@ -41,8 +41,3 @@ var Bill = Backbone.Model.extend({
 
 })
 
-// var ModelA = Backbone.Model.extend(){
-// 	initialize: function(){
-// 		console.log('model-A was made!!!!!!!!')
-// 	}
-// }

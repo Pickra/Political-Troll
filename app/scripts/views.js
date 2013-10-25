@@ -4,7 +4,7 @@ var ViewA = Backbone.View.extend({
 	
 	tagName: 'div',
 	
-	classname: 'viewA',
+	className: 'viewA',
 
 	events:{
 
@@ -44,7 +44,7 @@ var ViewB = Backbone.View.extend({
 
 	tagname: 'div',
 
-	classname: 'viewB',
+	className: 'viewB',
 
 	initialize: function(){
 		$('.main').html('');
@@ -70,7 +70,7 @@ var BillView = Backbone.View.extend({
 
 	tagname: 'div',
 
-	classname: 'billView',
+	className: 'billView',
 
 	initialize: function(){
 		// $('.views').html('');
@@ -89,7 +89,7 @@ var PoliticianView = Backbone.View.extend({
 
 	tagname: 'a',
 
-	classname: 'politicianView',
+	className: 'politicianView',
 
 	initialize: function(){
 		// $('.views').html('');
