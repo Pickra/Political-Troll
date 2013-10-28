@@ -23,13 +23,22 @@ var State = Backbone.Model.extend({
 
 
 
-var Politician = Backbone.Model.extend({
+var Member = Backbone.Model.extend({
 	initialize: function(){
-		console.log('politician was made!!!!')
+
+		// politician = _.chain()
+		// _.each()_.pluck(StateMembers, [name, id]);
+
+		console.log('members were made!!!!')
 	},
 
-	
+
 })
+
+
+
+
+
 
 var Bill = Backbone.Model.extend({
 

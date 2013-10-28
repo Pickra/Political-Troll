@@ -3,27 +3,7 @@ $(document).ready(function(){
 		width: '150px'
 	})
 	
-	// $('.button').click(function(){
-	// 	var stateCode = $('.chosen').text();
-	// 	putTheStateIn(stateCode);		
-	// })
-
 });
-
-// the value that is chosen in #view-A-template.chosen
-// var stateCode = $('.chosen').val();
-// var stateCode = $('.chosen option:selected').text();
-// var stateCode = $('.chosen :selected').text();
-// var stateCode = $('.chosen :selected').val();
-
-
-
-// function putTheStateIn(stateCode){
-// 	$('.state-goes-here').html(stateCode);	
-// }
-
-
-
 
 
 

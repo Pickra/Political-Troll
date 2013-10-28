@@ -17,11 +17,19 @@ var PolitiTrollRouter = Backbone.Router.extend({
 	},
 
 	viewB: function(){
-
-		var stateCode = $('.chosen :selected').text();
-		this.viewB = new ViewB({state: stateCode});
 		console.log('route to viewB, you did!');	
+
+		stateCode = $('.chosen').val();
+
+		state = $('.chosen :selected').text();
+		this.viewB = new ViewB({state: state});
+		membersFromYourState = new StateMembers;
+
+		membersFromYourState.fetch({cache:true})
+		console.log(membersFromYourState)
 	}
+
+
 })
 
 router = new PolitiTrollRouter()
