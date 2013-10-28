@@ -3,20 +3,31 @@ $(document).ready(function(){
 		width: '150px'
 	})
 	
-
-
-	// $(".state-goes-here").click(function(){
-	// 	stateCode();
+	// $('.button').click(function(){
+	// 	var stateCode = $('.chosen').text();
+	// 	putTheStateIn(stateCode);		
 	// })
-		
 
 });
 
-// stateCode: function(){
-// 	var chosenvalue = $('.chosen').val()
-	
-// 	console.log('hey',chosenvalue)
+// the value that is chosen in #view-A-template.chosen
+// var stateCode = $('.chosen').val();
+// var stateCode = $('.chosen option:selected').text();
+// var stateCode = $('.chosen :selected').text();
+// var stateCode = $('.chosen :selected').val();
+
+
+
+// function putTheStateIn(stateCode){
+// 	$('.state-goes-here').html(stateCode);	
 // }
+
+
+
+
+
+
+
 
 
 // $.each(currentMembers function(id){

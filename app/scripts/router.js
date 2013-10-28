@@ -5,6 +5,7 @@ var PolitiTrollRouter = Backbone.Router.extend({
 	},
 
 	routes: {
+		
 	''				: 'viewA',
 	'B'				: 'viewB'
 
@@ -16,7 +17,9 @@ var PolitiTrollRouter = Backbone.Router.extend({
 	},
 
 	viewB: function(){
-		this.viewB = new ViewB();
+
+		var stateCode = $('.chosen :selected').text();
+		this.viewB = new ViewB({stateCode: stateCode});
 		console.log('route to viewB, you did!');	
 	}
 })

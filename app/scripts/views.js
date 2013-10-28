@@ -46,7 +46,8 @@ var ViewB = Backbone.View.extend({
 
 	className: 'viewB',
 
-	initialize: function(){
+	initialize: function(options){
+		this.options = options;
 		$('.main').html('');
 		$('.main').append(this.$el);
 		console.log('u initialized viewB yo');
@@ -54,7 +55,7 @@ var ViewB = Backbone.View.extend({
 	},
 
 	render: function(){
-		this.$el.append(this.template());
+		this.$el.append(this.template({options: this.options}));
 	}
 
 })
