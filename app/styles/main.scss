@@ -1,3 +1,16 @@
+
+// MIXINS
+@mixin logo(){
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+
+
+
+
+
 /*  CONTAINERS */
 
 *{
@@ -17,8 +30,8 @@ body {
 .white-house {
     background: url("../images/whitehouse.png") no-repeat;
     background-size: 750px;
-    background-position-x: 250px;
-    background-position-y: -40px;
+    background-position-x: 244px;
+    background-position-y: -24px;
 }
 
 .main {
@@ -32,17 +45,14 @@ body {
 }
 
 .head-wrap {
-    margin: 40px 0 0;;
-    
+    margin: 40px 0 0;;    
     
     .title {
         margin: 20px 395px 0;
         display: inline-block;
         font-weight: 900;
         font-size: 50px;
-    }
-
-    
+    }  
 }
 
 p {
@@ -56,22 +66,14 @@ p {
 
 .foot-wrap {
     display: inline-block;
-    margin: 148px 130px 0;
+    margin: 188px 120px 0;
     padding-bottom: 10px;
     
 
-    img {
-        height: 100px;
-        width: 100px;
-        display: inline-block;
+    .logo {
+        @include logo;
         margin-right: 225px;
     }
-}
-
-
-.big-pic {
-    height: 200px;
-    width: 200px;
 }
 
 
@@ -84,6 +86,21 @@ p {
 .chosen-container {
     margin-right: 212px;
 }
+
+// viewB
+
+.viewB {
+    .yo {
+        margin: 257px 0 0;
+    }
+
+    .logo {
+        @include logo;
+        margin-left: 300px;
+        margin-top: -100px;
+    }
+}
+
 
 /////////    BUTTONS    /////////
 
@@ -104,6 +121,8 @@ p {
 .button:hover {
     background: rgb(33, 84, 128);
 }
+
+
 
 
 /*  BROWSEHAPPY */

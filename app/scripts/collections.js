@@ -1,9 +1,18 @@
-var CollectionOfPoliticians = Backbone.Collection.extend({
+StateMembers = Backbone.Collection.extend({
 	initialize: function(){
-		this.on('add', function(politician) {
-			new PoliticianView({model:politician})
-			consol.log('you just made a new collection brah!!!')
-		})
+		// this.on('add', function(members) {
+		// 	new ({members:politician})
+		// 	console.log(members)
+		// 	console.log('StateMembers collection initialized')
+		// })
 	},
-	model: Politician,
+
+	parse: function(response){
+
+		return response.objects
+	},
+
+	url: 'https://www.govtrack.us/api/v2/role?current=true&state=SC&format=jsonp&callback=?',
+
+	model: State,
 })

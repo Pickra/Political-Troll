@@ -62,27 +62,16 @@ var ViewB = Backbone.View.extend({
 
 
 
+// var StateView = Backbone.View.extend({
+
+// })
 
 
 
-var BillView = Backbone.View.extend({
 
-	template:_.template($('bill-template').text()),
 
-	tagname: 'div',
 
-	className: 'billView',
 
-	initialize: function(){
-		// $('.views').html('');
-		this.render();
-	},
-
-	render: function(){
-		this.$el.append(this.template());
-	}, 	
-
-})
 
 var PoliticianView = Backbone.View.extend({
 
@@ -101,3 +90,25 @@ var PoliticianView = Backbone.View.extend({
 		this.$el.append(this.template());
 	}, 	
 })
+
+
+
+
+// var BillView = Backbone.View.extend({
+
+// 	template:_.template($('bill-template').text()),
+
+// 	tagname: 'div',
+
+// 	className: 'billView',
+
+// 	initialize: function(){
+// 		// $('.views').html('');
+// 		this.render();
+// 	},
+
+// 	render: function(){
+// 		this.$el.append(this.template());
+// 	}, 	
+
+// })

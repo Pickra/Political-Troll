@@ -3,28 +3,32 @@ var State = Backbone.Model.extend({
 	// state.fetch({cache: true, success: function(data){console.log('hey')}})
 
 // state.get(members)
-	url: function() {															/* stateCode is the state field, the param established in the JSON*/
-		return "https://www.govtrack.us/api/v2/role?current=true&state=" + this.get('stateCode') + "&format=jsonp&callback=?"
-	},
+	// url: function() {															/* stateCode is the state field, the param established in the JSON*/
+	// 	return "https://www.govtrack.us/api/v2/role?current=true&state=" + this.get('stateCode') + "&format=jsonp&callback=?"
+	// },
 
-	parse: function(response){
-		// members is an array
-		return {members: response.objects}
-	}
+	// parse: function(response){
+	// 	// members is an object in the collection
+	// 	return {members: response.objects}
+	// }
 })
+
+
+
+
+
+
+
+
+
+
 
 var Politician = Backbone.Model.extend({
 	initialize: function(){
 		console.log('politician was made!!!!')
 	},
 
-	defaults:{
-		name: '', 					/*	how do i call it inside 'person object'?	*/
-		id: '',						/*	reference the DB	*/
-		photo: '',
-		state: '',
-		role_type_label: '' 		/*	senator or representative	*/
-	}
+	
 })
 
 var Bill = Backbone.Model.extend({

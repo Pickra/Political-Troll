@@ -36,12 +36,9 @@
 <!-- view-A-template -->
         <script type="text/template" id="view-A-template">
             <div class="head-wrap">
-                <span class="title">Politi Troll</span>
-                
+                <span class="title">Politi Troll</span>    
             </div>
-                
-
-                
+            
             <div class="foot-wrap">
                 <select class="chosen" data-placeholder="Select Your State">
                     <option></option>
@@ -98,7 +95,7 @@
                     <option value="WY">Wyoming</option>
 
                 </select>
-                <img src="../images/Placeholder-Troll.png">
+                <img class="logo" src="../images/Placeholder-Troll.png">
                 <a href="/#B">
                     <button class="button">Submit</button>
                 </a>
@@ -109,19 +106,12 @@
 <!-- view-B-template -->
         <script type="text/template" id="view-B-template">
             <div class="head-wrap">
-                <span class="title">Politi Troll</span>
-                <img src="../images/Placeholder-Troll.png">
+                <span class="title">Politi Troll</span>    
             </div>
-            <p>These guys are from <span class="state-goes-here"><%= options.stateCode%></span>
+            <p class="yo">These guys are from <span class="state-goes-here"><%= options.state%></span>
             </p>
-            <div class="politician-view">
-            </div>
-            <div class="foot-wrap">
-                <input placeholder="What District?">
-                <a href="/#C">
-                    <button class="button">Submit</button>
-                </a>
-            </div>
+            <img class="logo" src="../images/Placeholder-Troll.png">
+            <div class="politicians-view"></div>            
         </script>
 
 <!-- view-C-template -->
