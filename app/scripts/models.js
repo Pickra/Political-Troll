@@ -16,6 +16,11 @@ var Member = Backbone.Model.extend({
 
 
 
+var Headshot = Backbone.Model.extend({
+
+})
+
+
 
 var Bill = Backbone.Model.extend({
 	initialize: function() {

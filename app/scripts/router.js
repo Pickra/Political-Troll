@@ -17,6 +17,10 @@ var PolitiTrollRouter = Backbone.Router.extend({
 		console.log('route to viewA, you did!');
 	},
 
+
+	// make sure to call fetch with cache: true in the options. because this API doesn't like the trick that javascript does where it changes the end of the url every refresh.
+	// state.fetch({cache: true, success: function(data){console.log('hey')}})
+
 	viewB: function(){
 		console.log('route to viewB, you did!');	
 
@@ -24,19 +28,31 @@ var PolitiTrollRouter = Backbone.Router.extend({
 
 		state = $('.chosen :selected').text();
 		this.viewB = new ViewB({state: state});
+		
+
 		this.membersFromYourState = new StateMembers();
 
-		this.membersFromYourState.fetch({cache:true})
+		this.membersFromYourState.fetch({cache:true});
 
 		this.membersFromYourState.each(function(model){
 			new Member({member: model})
 		})
 
-		console.log(this.membersFromYourState)
+		console.log(this.membersFromYourState);
 	},
 
 	viewD: function(){
-		// console.log('');
+		this.viewD = new ViewD({})
+
+		this.headshots = new Headshots();
+
+		this.headshots.fetch({cache:true})
+
+		this.headshots.each(function(model){
+			new Headshot({headshot: model})
+		})
+
+		console.log(this.headshots);
 	}
 
 
