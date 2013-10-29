@@ -36,7 +36,7 @@ var PolitiTrollRouter = Backbone.Router.extend({
 	},
 
 	viewD: function(){
-		console.log('viewD');
+		// console.log('');
 	}
 
 

@@ -1,6 +1,6 @@
 var ViewA = Backbone.View.extend({
 	
-	template:_.template($('#view-A-template').text()),
+	template: _.template($('#view-A-template').text()),
 	
 	tagName: 'div',
 	
@@ -26,11 +26,6 @@ var ViewA = Backbone.View.extend({
 // when it changes, get the value
 		console.log('you made a change in chosen!!!!')
 		console.log($('.chosen').val())
-		
-// .get(stateCode:model);
-// create a new state model instance with the value returned from JSON 
-// 	this.value = new State;
-	
 	}
 })
 
@@ -40,7 +35,7 @@ var ViewA = Backbone.View.extend({
 
 var ViewB = Backbone.View.extend({
 	
-	template:_.template($('#view-B-template').text()),
+	template:  _.template($('#view-B-template').text()),
 
 	tagname: 'div',
 
@@ -51,6 +46,27 @@ var ViewB = Backbone.View.extend({
 		$('.main').html('');
 		$('.main').append(this.$el);
 		console.log('u initialized viewB yo');
+		
+		this.render();
+	},
+
+	render: function(){
+		this.$el.append(this.template({options: this.options}));
+	}
+})
+
+
+
+var ViewD = Backbone.View.extend({
+
+	template: _.template($('view-D-template').text()),
+
+	className: 'ViewD',
+
+	initialize: function(options){
+		$('.main').html('');
+		$('.main').append(this.$el);
+
 		this.render();
 	},
 
