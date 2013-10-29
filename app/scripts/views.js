@@ -67,6 +67,10 @@ template: _.template($('#member-view-template').text()),
 
 	className: 'politicianView',
 
+	events: {
+		'click .member-id'		:  'memberId'
+	},
+
 	initialize: function(options){
 		this.options = options;
 
@@ -77,6 +81,12 @@ template: _.template($('#member-view-template').text()),
 	render: function(){
 		this.$el.append(this.template({member: this.model}));
 	}, 	
+
+	memberId: function(event){
+    	memberId = this.model.get('id');
+    	console.log(memberId);
+	}
+
 })
 
 
