@@ -52,23 +52,18 @@ var ViewB = Backbone.View.extend({
 		$('.main').append(this.$el);
 		console.log('u initialized viewB yo');
 		this.render();
-
-
 	},
 
 	render: function(){
 		this.$el.append(this.template({options: this.options}));
 	}
-
 })
 
 
 
 var MemberView = Backbone.View.extend({
 
-	template: _.template($('#member-view-template').text()),
-
-	// tagName: 'a',
+template: _.template($('#member-view-template').text()),
 
 	className: 'politicianView',
 

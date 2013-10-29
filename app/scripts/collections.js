@@ -6,7 +6,11 @@ StateMembers = Backbone.Collection.extend({
 	},
 
 	parse: function(response){
-
+		// _.each(response, function(array){
+		// 	_.each(array, function(object){
+		// 		console.log(object.person);
+		// 	})
+		// })
 		return response.objects
 	},
 	
