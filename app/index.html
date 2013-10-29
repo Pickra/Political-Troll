@@ -127,29 +127,27 @@
 
         </script> -->
 
-<!-- view-D-template 
+<!-- view-D-template  -->
         <script type="text/template" id="view-D-template">
             <div class="head-wrap">
-                <span class="title">Politi Troll</span>
-                <img class="big-pic" src="<%=politician.get('photo')%>">
-                <span><%=politician.get('name')%></span>
+                <span class="title">Politi Troll</span>    
             </div>
+            </p>
+            <img class="logo" src="../images/Placeholder-Troll.png">
+            <div class="politicians-view"></div> 
             <div class="bill-view"></div>
-            <div class="foot-wrap">
-                <img src="../images/Placeholder-Troll.png">
-                </div>
-                <button class="button">Go Again!</button>
-        </script> -->
+            
+                
+        </script>
             
 <!-- member-template -->
-        <script type="text/tem" id="member-view-template">
+        <script type="text/template" id="member-view-template">
             <a href="#" class="member-id" id='<%= member.get("person").id%>'><%= member.get('person').name%></a>
         </script>
 
 <!--  bill-template-->
-        <script type="text/tem" id="bill-view">
-            <span><%=bill.get('name')%>
-            <span><%=bill.get('vote')%>
+        <script type="text/template" id="bill-view-template">
+            
         </script>
 
 <!-- --------------------   SCRIPTS --------------------------------->

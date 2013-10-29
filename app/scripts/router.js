@@ -1,7 +1,7 @@
 
 var PolitiTrollRouter = Backbone.Router.extend({
 	initialize: function(){
-		console.log('router initialized sucka!')
+		console.log('router initialized')
 	},
 
 	routes: {

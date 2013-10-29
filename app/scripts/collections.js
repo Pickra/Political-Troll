@@ -6,11 +6,6 @@ StateMembers = Backbone.Collection.extend({
 	},
 
 	parse: function(response){
-		// _.each(response, function(array){
-		// 	_.each(array, function(object){
-		// 		console.log(object.person);
-		// 	})
-		// })
 		return response.objects
 	},
 	
@@ -19,9 +14,20 @@ StateMembers = Backbone.Collection.extend({
 	// state.fetch({cache: true, success: function(data){console.log('hey')}})
 	url: function(){
 		return 'https://www.govtrack.us/api/v2/role?current=true&state=' + stateCode + '&format=jsonp&callback=?'
-		console.log(stateCode);
 	},
 
 	model: Member,
 
+})
+
+
+Headshots = Backbone.Collection.extend({
+	initialize: function(){
+	}, 
+
+	url: function(){
+		return 'http://www.govtrack.us/data/photos/' + memberId + "-200px.jpeg"
+	}, 
+
+	model: Bill,
 })

@@ -6,7 +6,6 @@ var State = Backbone.Model.extend({
 
 
 
-
 var Member = Backbone.Model.extend({
 	initialize: function(){
 		console.log('this is ', this);
@@ -20,7 +19,7 @@ var Member = Backbone.Model.extend({
 
 var Bill = Backbone.Model.extend({
 	initialize: function() {
-		console.log('bill was made!!!!')
+		console.log('some pics', this);
 	},
 
 })
