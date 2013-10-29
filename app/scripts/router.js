@@ -7,8 +7,7 @@ var PolitiTrollRouter = Backbone.Router.extend({
 	routes: {
 
 	''				: 'viewA',
-	'B'				: 'viewB',
-	'D'				: 'viewD'
+	'B'				: 'viewB'
 
 	},
 
@@ -40,14 +39,6 @@ var PolitiTrollRouter = Backbone.Router.extend({
 
 		console.log(this.membersFromYourState);
 	},
-
-	viewD: function(){
-		this.viewD = new ViewD()
-
-		
-
-		console.log(this.headshots);
-	}
 
 
 })
