@@ -52,6 +52,8 @@ var ViewB = Backbone.View.extend({
 		$('.main').append(this.$el);
 		console.log('u initialized viewB yo');
 		this.render();
+
+
 	},
 
 	render: function(){
@@ -62,32 +64,23 @@ var ViewB = Backbone.View.extend({
 
 
 
-// var StateView = Backbone.View.extend({
+var MemberView = Backbone.View.extend({
 
-// })
-
-
-
-
-
-
-
-
-var PoliticianView = Backbone.View.extend({
-
-	template:_.template($('bill-template').text()),
+	template: _.template($('#member-view').text()),
 
 	tagname: 'a',
 
 	className: 'politicianView',
 
-	initialize: function(){
-		// $('.views').html('');
+	initialize: function(options){
+		this.options = options;
+
+		$('.politicians-view').append(this.$el);
 		this.render();
 	},
 
 	render: function(){
-		this.$el.append(this.template());
+		this.$el.append(this.template({member: this.model}));
 	}, 	
 })
 

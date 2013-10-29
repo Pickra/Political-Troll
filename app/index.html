@@ -114,7 +114,7 @@
             <div class="politicians-view"></div>            
         </script>
 
-<!-- view-C-template -->
+<!-- view-C-template 
         <script type="text/template" id="view-C-template">
             <div class="head-wrap">
                 <span class="title">Politi Troll</span>
@@ -125,27 +125,25 @@
             <div class="politician-view">
             </div>
 
-        </script>
+        </script> -->
 
-<!-- view-D-template -->
+<!-- view-D-template 
         <script type="text/template" id="view-D-template">
-        <div class="head-wrap">
-            <span class="title">Politi Troll</span>
-            <img class="big-pic" src="<%=politician.get('photo')%>">
-            <span><%=politician.get('name')%></span>
-        </div>
-        <div class="bill-view"></div>
-        <div class="foot-wrap">
-            <img src="../images/Placeholder-Troll.png">
+            <div class="head-wrap">
+                <span class="title">Politi Troll</span>
+                <img class="big-pic" src="<%=politician.get('photo')%>">
+                <span><%=politician.get('name')%></span>
             </div>
-            <button class="button">Go Again!</button>
-        </script>
+            <div class="bill-view"></div>
+            <div class="foot-wrap">
+                <img src="../images/Placeholder-Troll.png">
+                </div>
+                <button class="button">Go Again!</button>
+        </script> -->
             
-<!-- politician-template -->
-        <script type="text/tem" id="politician-view">
-            <img src="<%=politician.get('photo')%>"
-            <span><%=politician.get('name')%>
-        // party???
+<!-- member-template -->
+        <script type="text/tem" id="member-view">
+            <span><%= member.get('person').name%></span>
         </script>
 
 <!--  bill-template-->

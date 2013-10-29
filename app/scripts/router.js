@@ -23,10 +23,15 @@ var PolitiTrollRouter = Backbone.Router.extend({
 
 		state = $('.chosen :selected').text();
 		this.viewB = new ViewB({state: state});
-		membersFromYourState = new StateMembers;
+		this.membersFromYourState = new StateMembers();
 
-		membersFromYourState.fetch({cache:true})
-		console.log(membersFromYourState)
+		this.membersFromYourState.fetch({cache:true})
+
+		this.membersFromYourState.each(function(model){
+			new Member({member: model})
+		})
+
+		console.log(this.membersFromYourState)
 	}
 
 

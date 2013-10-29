@@ -29,7 +29,7 @@ var Member = Backbone.Model.extend({
 		// politician = _.chain()
 		// _.each()_.pluck(StateMembers, [name, id]);
 
-		console.log('members were made!!!!')
+		console.log('this is: ', this)
 	},
 
 

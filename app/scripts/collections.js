@@ -1,10 +1,8 @@
 StateMembers = Backbone.Collection.extend({
 	initialize: function(){
-		// this.on('add', function(members) {
-		// 	new ({members:politician})
-		// 	console.log(members)
-		// 	console.log('StateMembers collection initialized')
-		// })
+		this.on("add", function(model){
+			new MemberView({model: model})
+		})
 	},
 
 	parse: function(response){
@@ -21,4 +19,5 @@ StateMembers = Backbone.Collection.extend({
 	},
 
 	model: Member,
+
 })
