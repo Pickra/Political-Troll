@@ -16,15 +16,3 @@ StateMembers = Backbone.Collection.extend({
 	model: Member,
 
 })
-
-
-Headshots = Backbone.Collection.extend({
-	initialize: function(){
-	}, 
-
-	url: function(){
-		return 'http://www.govtrack.us/data/photos/' + memberId + "-200px.jpeg"
-	}, 
-
-	model: Bill,
-})

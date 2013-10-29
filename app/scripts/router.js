@@ -42,15 +42,9 @@ var PolitiTrollRouter = Backbone.Router.extend({
 	},
 
 	viewD: function(){
-		this.viewD = new ViewD({})
+		this.viewD = new ViewD()
 
-		this.headshots = new Headshots();
-
-		this.headshots.fetch({cache:true})
-
-		this.headshots.each(function(model){
-			new Headshot({headshot: model})
-		})
+		
 
 		console.log(this.headshots);
 	}
