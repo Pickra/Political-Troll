@@ -91,8 +91,6 @@ template: _.template($('#member-view-template').text()),
 
 
 
-
-
 var ViewD = Backbone.View.extend({
 
 	template: _.template($('view-D-template').text()),
