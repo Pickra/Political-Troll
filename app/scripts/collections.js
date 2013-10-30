@@ -21,6 +21,19 @@ StateMembers = Backbone.Collection.extend({
 
 Bills = Backbone.Collection.extend({
 
+	initialize: function(){
+		this.on('add', function(model){
+			new BillView({model: model})
+		})
+	},
 
-	model:Bill
+	parse: function(response){
+		return response.objects
+	},
+
+	url: function(){
+		return "https://www.govtrack.us/api/v2/vote_voter/?person=" +memberId+ "&limit=600&fields=option__value,vote__question"
+	},
+
+	model:Bill,
 })

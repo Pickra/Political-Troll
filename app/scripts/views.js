@@ -83,7 +83,7 @@ template: _.template($('#member-view-template').text()),
 	memberId: function(event){
 
     	ViewD = new ViewD({model: this.model});	
-    	memberId = this.model.get('id');
+
 	},
 })
 
@@ -111,30 +111,24 @@ ViewD = Backbone.View.extend({
 })
 
 
+var BillView = Backbone.View.extend({
 
+	template:_.template($('bill-view-template').text()),
 
+	tagname: 'div',
 
+	className: 'billView',
 
+	initialize: function(){
+		$('.bills').html('');
+		$('.bills').append(this.$el);
+		memberId = this.model.get('id');
+		this.render();
+		console.log(this.memberId);
+	},
 
+	render: function(){
+		this.$el.append(this.template({member: this.model}));
+	}, 	
 
-
-
-
-// var BillView = Backbone.View.extend({
-
-// 	template:_.template($('bill-template').text()),
-
-// 	tagname: 'div',
-
-// 	className: 'billView',
-
-// 	initialize: function(){
-// 		// $('.views').html('');
-// 		this.render();
-// 	},
-
-// 	render: function(){
-// 		this.$el.append(this.template());
-// 	}, 	
-
-// })
+})

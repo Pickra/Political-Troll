@@ -135,8 +135,7 @@
             </p>
             <img class="logo" src="../images/Placeholder-Troll.png">
 
-            <div class="members-view"><img src="http://www.govtrack.us/data/photos/<%=member.get('person').id %>-200px.jpeg"><%= member.get('person').name%></div>
-            <div class="bill-view"></div>        
+            <div class="members-view"><img src="http://www.govtrack.us/data/photos/<%=member.get('person').id %>-200px.jpeg"><%= member.get('person').name%></div>       
         </script>
             
 <!-- member-template -->
@@ -146,7 +145,7 @@
 
 <!--  bill-template-->
         <script type="text/template" id="bill-view-template">
-            
+            <div class='bills'></div>
         </script>
 
 <!-- --------------------   SCRIPTS --------------------------------->
