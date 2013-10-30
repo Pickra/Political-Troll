@@ -41,6 +41,7 @@ var ViewB = Backbone.View.extend({
 
 	className: 'viewB',
 
+
 	initialize: function(options){
 		this.options = options;
 		$('.main').html('');
@@ -53,27 +54,10 @@ var ViewB = Backbone.View.extend({
 	render: function(){
 		this.$el.append(this.template({options: this.options}));
 	}
+
 })
 
 
-
-var ViewD = Backbone.View.extend({
-
-	template: _.template($('view-D-template').text()),
-
-	className: 'ViewD',
-
-	initialize: function(options){
-		$('.main').html('');
-		$('.main').append(this.$el);
-
-		this.render();
-	},
-
-	render: function(){
-		this.$el.append(this.template({options: this.options}));
-	}
-})
 
 
 
@@ -100,10 +84,39 @@ template: _.template($('#member-view-template').text()),
 
 	memberId: function(event){
     	memberId = this.model.get('id');
-    	console.log(memberId);
-	}
-
+   
+    	ViewD = new ViewD({model: this.model})
+	},
 })
+
+
+
+
+
+var ViewD = Backbone.View.extend({
+
+	template: _.template($('view-D-template').text()),
+
+	className: 'ViewD',
+
+	initialize: function(options){
+		$('.main').html('');
+		$('.main').append(this.$el);
+
+		this.render();
+	},
+
+	render: function(){
+		this.$el.append(this.template({options: this.options}));
+	}
+})
+
+
+
+
+
+
+
 
 
 

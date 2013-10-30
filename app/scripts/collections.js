@@ -1,5 +1,6 @@
 StateMembers = Backbone.Collection.extend({
 	initialize: function(){
+		
 		this.on("add", function(model){
 			new MemberView({model: model})
 		})
