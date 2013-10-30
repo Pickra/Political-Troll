@@ -1,5 +1,5 @@
 
-var PolitiTrollRouter = Backbone.Router.extend({
+PolitiTrollRouter = Backbone.Router.extend({
 	initialize: function(){
 		console.log('router initialized')
 	},

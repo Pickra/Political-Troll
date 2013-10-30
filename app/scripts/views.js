@@ -1,4 +1,4 @@
-var ViewA = Backbone.View.extend({
+ViewA = Backbone.View.extend({
 	
 	template: _.template($('#view-A-template').text()),
 	
@@ -33,7 +33,7 @@ var ViewA = Backbone.View.extend({
 
 
 
-var ViewB = Backbone.View.extend({
+ViewB = Backbone.View.extend({
 	
 	template:  _.template($('#view-B-template').text()),
 
@@ -59,13 +59,11 @@ var ViewB = Backbone.View.extend({
 
 
 
-
-
-var MemberView = Backbone.View.extend({
+MemberView = Backbone.View.extend({
 
 template: _.template($('#member-view-template').text()),
 
-	className: 'politicianView',
+	className: 'memberView',
 
 	events: {
 		'click .member-id'		:  'memberId'
@@ -74,7 +72,7 @@ template: _.template($('#member-view-template').text()),
 	initialize: function(options){
 		this.options = options;
 
-		$('.politicians-view').append(this.$el);
+		$('.members-view').append(this.$el);
 		this.render();
 	},
 
@@ -91,13 +89,15 @@ template: _.template($('#member-view-template').text()),
 
 
 
-var ViewD = Backbone.View.extend({
+ViewD = Backbone.View.extend({
 
-	template: _.template($('view-D-template').text()),
+	template: _.template($('#view-D-template').text()),
 
 	className: 'ViewD',
 
 	initialize: function(options){
+		this.options = options;
+
 		$('.main').html('');
 		$('.main').append(this.$el);
 
@@ -105,7 +105,7 @@ var ViewD = Backbone.View.extend({
 	},
 
 	render: function(){
-		this.$el.append(this.template({options: this.options}));
+		this.$el.append(this.template({member: this.model}));
 	}
 })
 

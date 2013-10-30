@@ -111,7 +111,7 @@
             <p class="yo">These guys are from <span class="state-goes-here"><%= options.state%></span>
             </p>
             <img class="logo" src="../images/Placeholder-Troll.png">
-            <div class="politicians-view"></div>            
+            <div class="members-view"></div>            
         </script>
 
 <!-- view-C-template 
@@ -134,10 +134,8 @@
             </div>
             </p>
             <img class="logo" src="../images/Placeholder-Troll.png">
-            <div class="politicians-view"></div> 
-            <div class="bill-view"></div>
-            
-                
+            <div class="members-view"><%= member.get('person').name%></div> 
+            <div class="bill-view"></div>        
         </script>
             
 <!-- member-template -->
