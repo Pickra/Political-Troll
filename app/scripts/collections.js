@@ -17,3 +17,10 @@ StateMembers = Backbone.Collection.extend({
 	model: Member,
 
 })
+
+
+Bills = Backbone.Collection.extend({
+
+
+	model:Bill
+})

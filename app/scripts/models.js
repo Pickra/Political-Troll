@@ -8,8 +8,6 @@ Member = Backbone.Model.extend({
 		console.log('this is ', this);
 
 	},
-
-	// url : 'http://www.govtrack.us/data/photos/' +this.model.get('id')
 	
 })
 
