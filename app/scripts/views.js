@@ -81,9 +81,9 @@ template: _.template($('#member-view-template').text()),
 	}, 	
 
 	memberId: function(event){
+
+    	ViewD = new ViewD({model: this.model});	
     	memberId = this.model.get('id');
-   
-    	ViewD = new ViewD({model: this.model})
 	},
 })
 
@@ -95,16 +95,17 @@ ViewD = Backbone.View.extend({
 
 	className: 'ViewD',
 
-	initialize: function(options){
-		this.options = options;
+	initialize: function(){
 
 		$('.main').html('');
 		$('.main').append(this.$el);
+
 
 		this.render();
 	},
 
 	render: function(){
+
 		this.$el.append(this.template({member: this.model}));
 	}
 })

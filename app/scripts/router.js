@@ -5,7 +5,7 @@ PolitiTrollRouter = Backbone.Router.extend({
 	},
 
 	routes: {
-
+// this is an event listener, the left side is what it's listening for the right side, which is the function and then the function is run below
 	''				: 'viewA',
 	'B'				: 'viewB'
 
@@ -33,11 +33,7 @@ PolitiTrollRouter = Backbone.Router.extend({
 
 		this.membersFromYourState.fetch({cache:true});
 
-		this.membersFromYourState.each(function(model){
-			new Member({member: model})
-		})
-
-		console.log(this.membersFromYourState);
+		console.log('collection = ', this.membersFromYourState);
 	},
 
 
