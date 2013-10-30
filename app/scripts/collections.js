@@ -12,6 +12,7 @@ StateMembers = Backbone.Collection.extend({
 	
 	url: function(){
 		return 'https://www.govtrack.us/api/v2/role?current=true&state=' + stateCode + '&format=jsonp&callback=?'
+		// console.log('state members passin');
 	},
 
 	model: Member,
@@ -21,7 +22,9 @@ StateMembers = Backbone.Collection.extend({
 
 Bills = Backbone.Collection.extend({
 
-	initialize: function(){
+	initialize: function(model, options){
+		this.options = options;
+
 		this.on('add', function(model){
 			new BillView({model: model})
 		})
@@ -32,7 +35,7 @@ Bills = Backbone.Collection.extend({
 	},
 
 	url: function(){
-		return "https://www.govtrack.us/api/v2/vote_voter/?person=" +memberId+ "&limit=600&fields=option__value,vote__question"
+		return "https://www.govtrack.us/api/v2/vote_voter/?person=" + this.options.id + "&limit=600&fields=option__value,vote__question"
 	},
 
 	model:Bill,

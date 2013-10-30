@@ -140,12 +140,12 @@
             
 <!-- member-template -->
         <script type="text/template" id="member-view-template">
-            <a href="/#D" class="member-id" id='<%= member.get("person").id%>'><%= member.get('person').name%></a>
+            <a href="/#D" class="member-id" id='<%= member.get("person").id%>'><%= member.get('person').name %></a>
         </script>
 
 <!--  bill-template-->
         <script type="text/template" id="bill-view-template">
-            <div class='bills'></div>
+            <div class='bills'><%= options.get('option').value %></div>
         </script>
 
 <!-- --------------------   SCRIPTS --------------------------------->

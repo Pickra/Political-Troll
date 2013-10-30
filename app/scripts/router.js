@@ -24,10 +24,9 @@ PolitiTrollRouter = Backbone.Router.extend({
 		console.log('route to viewB, you did!');	
 
 		stateCode = $('.chosen').val();
-
 		state = $('.chosen :selected').text();
+
 		this.viewB = new ViewB({state: state});
-		
 
 		this.membersFromYourState = new StateMembers();
 
