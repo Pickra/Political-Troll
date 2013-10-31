@@ -124,8 +124,6 @@ var BillView = Backbone.View.extend({
 
 	initialize: function(options){
 		this.options = options;
-
-		// $('.bills').html('');
 		$('.ViewD').append(this.$el);
 		
 		this.render();
