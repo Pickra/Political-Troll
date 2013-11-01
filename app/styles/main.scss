@@ -7,6 +7,13 @@
     margin: 0 0 -16px -100px;
 }
 
+@mixin wrap(){
+    border-radius: 10px;
+    margin: 0 auto 15px;
+    padding: 30px;
+    background: #103F69;
+}
+
 
 
 
@@ -92,10 +99,7 @@ p {
 }
 
 .memberView {
-    border-radius: 10px;
-    margin: 0 auto 15px;
-    padding: 30px;
-    background: #103F69;
+    @include wrap;
     width: 400px;
     
     img {
@@ -119,23 +123,20 @@ p {
 
     .billView {
         
-        // width: 900px;
+        .created {
+            @include wrap;
+            display: inline-block;
+        }
 
         .bill {
+            max-width: 700px;
             display: inline-block;
-            border-radius: 10px;
-            margin: 0 auto 15px;
-            padding: 30px;
-            background: #103F69;
-            max-width: 800px;
+            @include wrap;
         }
 
         .vote {
             display: inline-block;
-            border-radius: 10px;
-            margin: 0 auto 15px;
-            padding: 30px;
-            background: #103F69;
+            @include wrap;
         }
     }
 }
