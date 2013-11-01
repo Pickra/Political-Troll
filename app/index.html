@@ -28,7 +28,7 @@
         <span class="title">Politi Troll</span>
             <img class="logo" src="../images/Placeholder-Troll.png">
         <img src="../images/whitehouse.png" class="white-house">
-        
+
         <div class="main"></div>
 
 <!-- -----------------  TEMPLATES -------------------------------------->
@@ -137,6 +137,7 @@
 
 <!--  bill-template-->
         <script type="text/template" id="bill-view-template">
+            <div class='created'><%= options.get('created')%></div>
             <div class='bill'><%= options.get('vote').question %></div>
             <div class='vote'><%= options.get('option').value %></div>
         </script>
