@@ -1,9 +1,10 @@
 
 // MIXINS
 @mixin logo(){
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     display: inline-block;
+    margin: 0 0 -16px -100px;
 }
 
 
@@ -15,7 +16,7 @@
 
 *{
     font-family: Lekton, sans-serif;
-    color: rgb(10, 196, 255);
+    color: #80AED3;
 }
 
 body {
@@ -24,56 +25,56 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-
+    text-align: center;
 }
 
+.title {
+        margin: 15px auto 0;
+        font-weight: 900;
+        font-size: 50px;
+        display: block;
+    }  
+
 .white-house {
-    background: url("../images/whitehouse.png") no-repeat;
-    background-size: 750px;
-    background-position-x: 244px;
-    background-position-y: -24px;
+    margin: -35px 85px -138px 0;
+    height: 400px;
+    width: 700px;
+    display: inline-block;
+
+    
 }
 
 .main {
     margin: 0 70px;
-    width: 1100px;
-    font-size: 18px;
+    // width: 1100px;
+    // font-size: 18px;
     line-height: 30px;
     background-color: rgba(47, 122, 187, 0.5);
     border-radius: 6px;
     display: block;
 }
 
-.head-wrap {
-    margin: 40px 0 0;;    
-    
-    .title {
-        margin: 20px 395px 0;
-        display: inline-block;
-        font-weight: 900;
-        font-size: 50px;
-    }  
-}
 
 p {
     text-align: center;
-}
-
-.views {
-    margin: 50px 100px 0px;
-    text-align: center;
-}
-
-.foot-wrap {
+    margin: 0 50px;
+    padding-top: 80px;
+    font-size: 25px;
     display: inline-block;
-    margin: 188px 120px 0;
-    padding-bottom: 10px;
-    
+    width: 500px;
+}
 
-    .logo {
-        @include logo;
-        margin-right: 225px;
-    }
+.logo {
+    @include logo;
+    // margin-right: 225px;
+}
+
+.input-wrap {
+    border-radius: 10px;
+    display: inline-block;
+    margin: 0 auto 15px;
+    padding: 30px;
+    background: #103F69;
 }
 
 
@@ -83,42 +84,83 @@ p {
 }
 
 
-.chosen-container {
-    margin-right: 212px;
+.chosen-results {
+    background: #0F3055;
 }
 
 // viewB
 
 .viewB {
-    .yo {
-        margin: 257px 0 0;
-    }
-
-    .logo {
-        @include logo;
-        margin-left: 300px;
-        margin-top: -100px;
+    a {
+        text-decoration: none;
     }
 }
 
+.memberView {
+    border-radius: 10px;
+    margin: 0 auto 15px;
+    padding: 30px;
+    background: #103F69;
+    width: 400px;
+    
+    img {
+        margin-right: 10px;
+    }
+}
+
+// ViewD
+
+.ViewD {
+    padding: 20px 0 0 0;
+
+    img {
+        height: 350px;
+        width: 320px;
+    }
+
+    .member-name {
+        font-size: 40px;
+    }
+
+    .billView {
+        
+        // width: 900px;
+
+        .bill {
+            display: inline-block;
+            border-radius: 10px;
+            margin: 0 auto 15px;
+            padding: 30px;
+            background: #103F69;
+        }
+
+        .vote {
+            display: inline-block;
+            border-radius: 10px;
+            margin: 0 auto 15px;
+            padding: 30px;
+            background: #103F69;
+        }
+    }
+}
 
 /////////    BUTTONS    /////////
 
-.button {
-   width: 50px;
-   height: 50px;
-   text-align: center;
-   background: rgb(16, 63, 105);
-   border-radius: 25px;
-   border: 1px solid rgb(33, 84, 128);
-   box-shadow: 0px 0px 2px 0px rgb(47, 122, 187);
-   display: inline-block;
-   margin: 0px 0 0px 0;
-   padding: 4px 0 0 0;
-   font-size: 15px;
+button {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    background: #0F3055;
+    border-radius: 100%;
+    border: 1px solid #215480;
+    box-shadow: 0px 0px 2px 0px #2f7abb;
+    display: inline-block;
+    margin: 0px 0 0px 0;
+    padding: 4px 0 0 0;
+    font-size: 15px;
 }
 
-.button:hover {
+button:hover {
     background: rgb(33, 84, 128);
 }
 
@@ -132,3 +174,16 @@ p {
     color: #000;
     padding: 0.2em 0;
 }
+
+//          trash
+
+// .views {
+//     margin: 50px 100px 0px;
+//     text-align: center;
+// }
+
+
+// .head-wrap {
+//     margin: 40px 0 0;;    
+    
+// }

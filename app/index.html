@@ -25,21 +25,17 @@
         <![endif]-->
 
 <!-- ------------------ CONTAINERS   ----------------------------------- -->
-        <div class="white-house">
-            <div class="main">
-                
-            </div>
-        </div>
+        <span class="title">Politi Troll</span>
+            <img class="logo" src="../images/Placeholder-Troll.png">
+        <img src="../images/whitehouse.png" class="white-house">
+        <div class="main"></div>
 
 <!-- -----------------  TEMPLATES -------------------------------------->
 
 <!-- view-A-template -->
         <script type="text/template" id="view-A-template">
-            <div class="head-wrap">
-                <span class="title">Politi Troll</span>    
-            </div>
-            
-            <div class="foot-wrap">
+
+            <div class="input-wrap">
                 <select class="chosen" data-placeholder="Select Your State">
                     <option></option>
                     <option value="AL">Alabama</option>
@@ -50,7 +46,7 @@
                     <option value="CO">Colorado</option>
                     <option value="CT">Connecticut</option>
                     <option value="DE">Delaware</option>
-                    <option value="DC">District of Columbia</option>
+                    <option value="DC">the District of Columbia</option>
                     <option value="FL">Florida</option>
                     <option value="GA">Georgia</option>
                     <option value="HI">Hawaii</option>
@@ -93,25 +89,25 @@
                     <option value="WV">West Virginia</option>
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>
-
                 </select>
-                <img class="logo" src="../images/Placeholder-Troll.png">
+                
                 <a href="/#B">
-                    <button class="button">Submit</button>
+                    <button>Submit</button>
                 </a>
-                <p>Welcome! Tell your friendly neighborhood troll which politician you would like to know about, regarding what bills they voted on and how they voted, and he will take care of the rest!</p>
+
             </div>
+
+            <p>Welcome! Tell your friendly neighborhood troll which politician you would like to know about, regarding what bills they voted on and how they voted, and he will take care of the rest!
+            </p>
+                
         </script>
 
 <!-- view-B-template -->
         <script type="text/template" id="view-B-template">
-            <div class="head-wrap">
-                <span class="title">Politi Troll</span>    
-            </div>
-            <p class="yo">These guys are from <span class="state-goes-here"><%= options.state%></span>
+            <p class="yo">These politicians are from <span class="state-goes-here"><%= options.state%></span>
             </p>
-            <img class="logo" src="../images/Placeholder-Troll.png">
-            <div class="members-view"></div>            
+            <div class="members-view"></div>
+            <hr>            
         </script>
 
 <!-- view-C-template 
@@ -129,23 +125,18 @@
 
 <!-- view-D-template  -->
         <script type="text/template" id="view-D-template">
-            <div class="head-wrap">
-                <span class="title">Politi Troll</span>    
-            </div>
-            </p>
-            <img class="logo" src="../images/Placeholder-Troll.png">
-
-            <div class="members-view"><img src="http://www.govtrack.us/data/photos/<%=member.get('person').id %>-200px.jpeg"><%= member.get('person').name%></div>       
+            <img src="http://www.govtrack.us/data/photos/<%=member.get('person').id %>-200px.jpeg">
+            <div class="member-name"><%= member.get('person').name%></div>       
         </script>
             
 <!-- member-template -->
         <script type="text/template" id="member-view-template">
-            <a href="/#D" class="member-id" id='<%= member.get("person").id%>'><%= member.get('person').name %></a>
+            <a href="/#D" class="member-id" id='<%= member.get("person").id%>'><img src="http://www.govtrack.us/data/photos/<%=member.get('person').id %>-50px.jpeg"><%= member.get('person').name %></a>
         </script>
 
 <!--  bill-template-->
         <script type="text/template" id="bill-view-template">
-            <div class='bills'><%= options.get('vote').question %></div>
+            <div class='bill'><%= options.get('vote').question %></div>
             <div class='vote'><%= options.get('option').value %></div>
         </script>
 

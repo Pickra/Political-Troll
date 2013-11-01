@@ -19,9 +19,9 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  border: 1px solid #aaa;
+  border: 1px solid #0F3055;
   border-top: 0;
-  background: #fff;
+  background: #0F3055;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
 }
 .chosen-container.chosen-with-drop .chosen-drop {
