@@ -40,7 +40,7 @@ Bills = Backbone.Collection.extend({
 
 	url: function(){
 		console.log(this.options.id);
-		return "https://www.govtrack.us/api/v2/vote_voter/?person=" + this.options.id + "&limit=5&fields=option__value,vote__question&format=jsonp&callback=?"
+		return "https://www.govtrack.us/api/v2/vote_voter/?person=" + this.options.id + "&limit=5&sort=-created&fields=option__value,vote__question&format=jsonp&callback=?"
 	},
 
 	model:Bill,
