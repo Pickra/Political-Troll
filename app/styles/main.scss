@@ -133,6 +133,7 @@ p {
         .bill {
             max-width: 700px;
             display: inline-block;
+            text-align: left;
             @include wrap;
         }
 
