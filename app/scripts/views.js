@@ -103,8 +103,6 @@ ViewD = Backbone.View.extend({
 		
 		var that = this;
 		bills.fetch({cache: true});
-		
-
 		this.render();
 	},
 
@@ -126,11 +124,17 @@ var BillView = Backbone.View.extend({
 		this.options = options;
 		$('.ViewD').append(this.$el);
 		
+		if($('.vote').val('') === 'Yea' || 'Aye'){
+			$('.vote').css('color', 'green');
+		} else if($('.vote').val('') === 'Nay' || 'No'){
+			$('.vote').css('color', 'red');
+		}
+
 		this.render();
 	},
 
 	render: function(){
 		this.$el.append(this.template({options: this.model}));
-	}, 	
+	},
 
 })
