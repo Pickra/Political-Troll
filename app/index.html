@@ -26,8 +26,8 @@
 
 <!-- ------------------ CONTAINERS   ----------------------------------- -->
         <span class="title">Politi Troll</span>
-            <img class="logo" src="../images/Placeholder-Troll.png">
-        <img src="../images/whitehouse.png" class="white-house">
+            <img class="logo" src="images/Placeholder-Troll.png">
+        <img src="images/whitehouse.png" class="white-house">
 
         <div class="main"></div>
 
@@ -135,9 +135,13 @@
         <script type="text/template" id="view-D-template">
             <img src="http://www.govtrack.us/data/photos/<%=member.get('person').id %>-200px.jpeg">
             <div class="member-name"><%= member.get('person').name%></div> 
+            
+            <a href="#B">
+                <button>Previous</button>
+            </a>
 
             <a href="">
-                <button>Back</button>
+                <button>Back To Start</button>
             </a>      
         </script>
             

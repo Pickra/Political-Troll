@@ -13,7 +13,7 @@ PolitiTrollRouter = Backbone.Router.extend({
 
 	viewA: function(){
 		this.viewA = new ViewA();
-		console.log('route to viewA, you did!');
+		console.log('routed to viewA');
 	},
 
 
@@ -21,7 +21,7 @@ PolitiTrollRouter = Backbone.Router.extend({
 	// state.fetch({cache: true, success: function(data){console.log('hey')}})
 
 	viewB: function(){
-		console.log('route to viewB, you did!');	
+		console.log('routed to viewB');	
 
 		stateCode = $('.chosen').val();
 		state = $('.chosen :selected').text();

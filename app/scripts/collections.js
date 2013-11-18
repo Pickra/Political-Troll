@@ -16,6 +16,7 @@ StateMembers = Backbone.Collection.extend({
 
 	model: Member,
 
+	// console.log('new StateMembers', StateMembers),
 })
 
 

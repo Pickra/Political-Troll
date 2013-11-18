@@ -46,7 +46,7 @@ ViewB = Backbone.View.extend({
 		this.options = options;
 		$('.main').html('');
 		$('.main').append(this.$el);
-		console.log('u initialized viewB yo');
+		console.log('viewB initialized');
 		
 		this.render();
 	},
