@@ -116,25 +116,26 @@ var BillView = Backbone.View.extend({
 
 	template:_.template($('#bill-view-template').text()),
 
-	tagname: 'div',
-
 	className: 'billView',
 
 	initialize: function(options){
 		this.options = options;
 		$('.ViewD').append(this.$el);
 		
-		if($('.vote').val('') === 'Yea' || 'Aye'){
-			$('.vote').css('color', 'green');
-		} else if($('.vote').val('') === 'Nay' || 'No'){
-			$('.vote').css('color', 'red');
-		}
 
 		this.render();
 	},
 
 	render: function(){
 		this.$el.append(this.template({options: this.model}));
+		
+		var voteValue = $('.vote').val();
+		if (voteValue === 'Yea' || voteValue === 'Aye') {
+		    $('.vote').css('color', 'green');
+		}
+		else if (voteValue == 'Nay' || voteValue === 'No') {
+		    $('.vote').css('color', 'red');
+		}
 	},
 
 })
