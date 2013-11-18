@@ -109,6 +109,7 @@
         <script type="text/template" id="view-B-template">
             <p class="yo">These politicians are from <span class="state-goes-here"><%= options.state%></span>
             </p>
+
             <a href="">
                 <button>Back</button>
             </a>
@@ -133,7 +134,11 @@
 <!-- view-D-template  -->
         <script type="text/template" id="view-D-template">
             <img src="http://www.govtrack.us/data/photos/<%=member.get('person').id %>-200px.jpeg">
-            <div class="member-name"><%= member.get('person').name%></div>       
+            <div class="member-name"><%= member.get('person').name%></div> 
+
+            <a href="">
+                <button>Back</button>
+            </a>      
         </script>
             
 <!-- member-template -->
