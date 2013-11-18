@@ -62,7 +62,9 @@ ViewB = Backbone.View.extend({
 MemberView = Backbone.View.extend({
 
 template: _.template($('#member-view-template').text()),
-
+	
+	// tagName: a,
+	
 	className: 'memberView',
 
 	events: {
