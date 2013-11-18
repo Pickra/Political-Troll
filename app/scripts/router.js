@@ -12,9 +12,9 @@ PolitiTrollRouter = Backbone.Router.extend({
 	},
 
 	viewA: function(){
-		$('.chosen').chosen({
-			width: '150px'
-		})
+		// $('.chosen').chosen({
+		// 	width: '150px'
+		// })
 
 		this.viewA = new ViewA();
 		console.log('routed to viewA');

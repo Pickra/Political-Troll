@@ -2,14 +2,9 @@ ViewA = Backbone.View.extend({
 	
 	template: _.template($('#view-A-template').text()),
 	
-	tagName: 'div',
+	// tagName: 'div',
 	
 	className: 'viewA',
-
-	events:{
-
-		'change .chosen'			:  'chosen'
-	},
 
 	initialize: function(){
 		$('.main').html('');
@@ -21,12 +16,6 @@ ViewA = Backbone.View.extend({
 	render: function(){
 		this.$el.append(this.template());
 	},
-
-	chosen	: function(){
-// when it changes, get the value
-		console.log('you made a change in chosen!!!!')
-		console.log($('.chosen').val())
-	}
 })
 
 
@@ -36,8 +25,6 @@ ViewA = Backbone.View.extend({
 ViewB = Backbone.View.extend({
 	
 	template:  _.template($('#view-B-template').text()),
-
-	tagname: 'div',
 
 	className: 'viewB',
 
@@ -61,10 +48,10 @@ ViewB = Backbone.View.extend({
 
 MemberView = Backbone.View.extend({
 
-template: _.template($('#member-view-template').text()),
+	template: _.template($('#member-view-template').text()),
 	
 	// tagName: a,
-	
+
 	className: 'memberView',
 
 	events: {
@@ -72,7 +59,6 @@ template: _.template($('#member-view-template').text()),
 	},
 
 	initialize: function(options){
-		this.options = options;
 
 		$('.members-view').append(this.$el);
 		this.render();
@@ -82,7 +68,7 @@ template: _.template($('#member-view-template').text()),
 		this.$el.append(this.template({member: this.model}));
 	}, 	
 
-	memberId: function(event){
+	memberId: function(){
     	viewD = new ViewD({model: this.model});	
 	},
 })
@@ -103,7 +89,6 @@ ViewD = Backbone.View.extend({
 		// this.bills = new Bills([], {id: this.model.get('id')});
 		var bills = new Bills([], {id: this.model.get('person').id});
 		
-		var that = this;
 		bills.fetch({cache: true});
 		this.render();
 	},
@@ -131,12 +116,12 @@ var BillView = Backbone.View.extend({
 	render: function(){
 		this.$el.append(this.template({options: this.model}));
 		
-		var voteValue = $('.vote').val();
-		if (voteValue === 'Yea' || voteValue === 'Aye') {
-		    $('.vote').css('color', 'green');
-		}
-		else if (voteValue == 'Nay' || voteValue === 'No') {
-		    $('.vote').css('color', 'red');
+		// var voteValue = $('.vote').val();
+		// if (voteValue === 'Yea' || voteValue === 'Aye') {
+		//     $('.vote').css('color', 'green');
+		// }
+		// else if (voteValue == 'Nay' || voteValue === 'No') {
+		//     $('.vote').css('color', 'red');
 		}
 	},
 

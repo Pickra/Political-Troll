@@ -1,9 +1,9 @@
 
-// $(document).ready(function(){
-// 	$('.chosen').chosen({
-// 		width: '150px'
-// 	})
+$(document).ready(function(){
+	$('.chosen').chosen({
+		width: '150px'
+	})
 
-// });
+});
 
 
