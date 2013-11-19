@@ -15,10 +15,6 @@
 }
 
 
-
-
-
-
 /*  CONTAINERS */
 
 *{
@@ -168,6 +164,11 @@ a {
     text-decoration: none;
 }
 
+.btn-wrap {
+    width: 400px;
+    margin: 45px auto;
+}
+
 
 /*  BROWSEHAPPY */
 .browsehappy {
@@ -178,14 +179,3 @@ a {
 }
 
 //          trash
-
-// .views {
-//     margin: 50px 100px 0px;
-//     text-align: center;
-// }
-
-
-// .head-wrap {
-//     margin: 40px 0 0;;    
-    
-// }
