@@ -139,9 +139,14 @@
         </script>
             
 <!-- member-template -->
-        <script type="text/template" id="member-view-template">
+
+<!--       <script type="text/template" id="member-view-template">
             <a href="#D" class="member-id" id='<%= member.get("person").id%>'><img src="http://www.govtrack.us/data/photos/<%=member.get('person').id %>-50px.jpeg"><%= member.get('person').name %></a>
-        </script>
+            </script> -->
+
+            <script type="text/template" id="member-view-template">
+                <a href="#D" class="member-id"><img src="http://www.govtrack.us/data/photos/<%=member.get('person').id %>-50px.jpeg"><%= member.get('person').name %></a>
+                </script> 
 
 <!--  bill-template-->
         <script type="text/template" id="bill-view-template">
@@ -163,6 +168,6 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
-        <script src="scripts/816bb8e2.main.js"></script>
+        <script src="scripts/7c3cf516.main.js"></script>
 </body>
 </html>
