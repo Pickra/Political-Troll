@@ -2,7 +2,7 @@ ViewA = Backbone.View.extend({
 	
 	template: _.template($('#view-A-template').text()),
 	
-	// tagName: 'div',
+	// tagName: 'a',
 	
 	className: 'viewA',
 
@@ -17,9 +17,6 @@ ViewA = Backbone.View.extend({
 		this.$el.append(this.template());
 	},
 })
-
-
-
 
 
 ViewB = Backbone.View.extend({
@@ -122,7 +119,7 @@ var BillView = Backbone.View.extend({
 		// }
 		// else if (voteValue == 'Nay' || voteValue === 'No') {
 		//     $('.vote').css('color', 'red');
-		}
+		// }
 	},
 
 })
