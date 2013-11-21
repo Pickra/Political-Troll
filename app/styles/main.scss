@@ -138,6 +138,14 @@ p {
             display: inline-block;
             @include wrap;
         }
+
+        .green {
+            color: green;
+        }
+
+        .red {
+            color: red;
+        }
     }
 }
 

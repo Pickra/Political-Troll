@@ -111,18 +111,43 @@ var BillView = Backbone.View.extend({
 	},
 
 	render: function(){
-		this.$el.append(this.template({options: this.model}));
-		
-		var voteValue = $('.vote').text() - voteValue;
+		// 'option' is refering to a property in the JSONP
+		var voteValue = this.model.get('option').value;
+		var color = '';
 
 		if (voteValue === 'Yea' || voteValue === 'Aye') {
-		    $('.vote').css('color', 'green');
+		    // $('.vote').css('color', 'green');
+		    color = 'green';
 		}
 		else if (voteValue == 'Nay' || voteValue === 'No') {
-		    $('.vote').css('color', 'red');
+		    // $('.vote').css('color', 'red');
+		    color = 'red';
 		}
 		    console.log($('.vote').length + ' ' + voteValue);
 		    // console.log($('.vote').length)
+
+		
+
+		this.model.set('klass', color)
+		this.$el.append(this.template({options: this.model}));
 	},
 
 })
+
+
+
+
+// render: function(){
+// 		this.$el.append(this.template({options: this.model}));
+		
+// 		var voteValue = $('.vote').text();
+
+// 		if (voteValue === 'Yea' || voteValue === 'Aye') {
+// 		    $('.vote').css('color', 'green');
+// 		}
+// 		else if (voteValue == 'Nay' || voteValue === 'No') {
+// 		    $('.vote').css('color', 'red');
+
+// 		}
+// 		    console.log(voteValue);
+// 	},
