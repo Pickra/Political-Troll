@@ -113,13 +113,15 @@ var BillView = Backbone.View.extend({
 	render: function(){
 		this.$el.append(this.template({options: this.model}));
 		
-		// var voteValue = $('.vote').val();
-		// if (voteValue === 'Yea' || voteValue === 'Aye') {
-		//     $('.vote').css('color', 'green');
-		// }
-		// else if (voteValue == 'Nay' || voteValue === 'No') {
-		//     $('.vote').css('color', 'red');
-		// }
+		var voteValue = $('.vote').text();
+		if (voteValue === 'Yea' || voteValue === 'Aye') {
+		    $('.vote').css('color', 'green');
+		}
+		else if (voteValue == 'Nay' || voteValue === 'No') {
+		    $('.vote').css('color', 'red');
+
+		    console.log(voteValue);
+		}
 	},
 
 })
