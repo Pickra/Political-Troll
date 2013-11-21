@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/d9643333.main.css">
+        <link rel="stylesheet" href="styles/91e8c6ef.main.css">
         <script src="scripts/vendor/f7f27360.modernizr.js"></script>
     </head>
     <body>
@@ -154,7 +154,7 @@
         <script type="text/template" id="bill-view-template">
             <div class='created'><%= options.get('created')%></div>
             <div class='bill'><%= options.get('vote').question %></div>
-            <div class='vote'><%= options.get('option').value %></div>
+            <div class='vote <%= options.get('klass') %>'><%= options.get('option').value %></div>
         </script>
 
 <!-- --------------------   SCRIPTS --------------------------------->
@@ -170,6 +170,6 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
-        <script src="scripts/376b263b.main.js"></script>
+        <script src="scripts/00b8f9c7.main.js"></script>
 </body>
 </html>
