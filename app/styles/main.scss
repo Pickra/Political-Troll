@@ -57,19 +57,24 @@ body {
     display: block;
 }
 
+
+h1 {
+    padding-top: 20px;
+}
+
 .viewA {
     p {
     text-align: center;
-    margin: 0 50px;
-    padding-top: 50px;
+    margin: 0px;
+    padding-top: 0px;
     font-size: 25px;
     display: inline-block;
     max-width: 520px;
     min-width: 250px;
     }
 
-    h1 {
-        padding-top: 20px;
+    .info-wrap {
+        margin-top: 20px;
     }
 }
 
@@ -83,7 +88,7 @@ body {
     padding: 30px;
     background: #103F69;
     vertical-align: top;
-    margin: 60px 0px 20px 0px;
+    margin: 0px 0px 20px 50px;
 }
 
 
