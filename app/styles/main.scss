@@ -102,6 +102,16 @@ p {
     img {
         margin-right: 10px;
     }
+
+    p {
+    text-align: center;
+    margin: 0 50px;
+    padding-top: 60px;
+    font-size: 25px;
+    display: inline-block;
+    max-width: 520px;
+    min-width: 250px;
+    }
 }
 
 // ViewD
@@ -123,14 +133,14 @@ p {
     .billView {
         
         .created {
-            @include wrap;
             display: inline-block;
+            @include wrap;
         }
 
         .bill {
             max-width: 600px;
-            display: inline-block;
             text-align: left;
+            display: inline-block;
             @include wrap;
         }
 

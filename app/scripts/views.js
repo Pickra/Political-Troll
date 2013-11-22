@@ -123,8 +123,8 @@ var BillView = Backbone.View.extend({
 		    // $('.vote').css('color', 'red');
 		    color = 'red';
 		}
-		    console.log($('.vote').length + ' ' + voteValue);
-		    // console.log($('.vote').length)
+		    // console.log($('.vote').length + ' ' + voteValue);
+		    console.log($('.vote'))
 
 		
 
