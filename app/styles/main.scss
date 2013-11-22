@@ -4,7 +4,7 @@
     height: 200px;
     width: 200px;
     display: inline-block;
-    margin: 0 0 -16px -100px;
+    margin: 0 0 -16px 0px;
 }
 
 @mixin wrap(){
@@ -43,7 +43,7 @@ body {
 }
 
 .white-house {
-    margin: -35px 85px -138px 0;
+    margin: -35px 0px -138px 0;
     height: 400px;
     width: 700px;
     display: inline-block;
@@ -118,10 +118,6 @@ h1 {
     background: #103F69;
     width: 400px;
     display: inline-block;
-    
-    img {
-        margin-right: 10px;
-    }
 
     p {
     text-align: center;
@@ -136,6 +132,7 @@ h1 {
     img {
         height: 100px;
         width: 100px;
+        margin-right: 10px;
     }
 }
 
