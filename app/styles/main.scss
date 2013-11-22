@@ -63,6 +63,8 @@ h1 {
 }
 
 .viewA {
+    box-shadow: 0px 0px 7px -2px rgb(19, 18, 18);
+
     p {
     text-align: center;
     margin: 0px;
@@ -90,7 +92,7 @@ h1 {
     vertical-align: top;
     margin: 0px 0px 20px 50px;
     border: 1px solid #091A2C;
-    box-shadow: 0px 0px 10px -3px white;
+    box-shadow: 0px 0px 7px -2px rgb(19, 18, 18);
 }
 
 
@@ -155,23 +157,10 @@ h1 {
     }
 
     .billView {
-        
-        .created {
-            display: inline-block;
-            @include wrap;
-        }
-
-        .bill {
+           @include wrap;
+           display: inline-block;
+           text-align: left;
             max-width: 600px;
-            text-align: left;
-            display: inline-block;
-            @include wrap;
-        }
-
-        .vote {
-            display: inline-block;
-            @include wrap;
-        }
 
         .green {
             color: green;
@@ -196,7 +185,7 @@ button {
     margin: 0px 0 10px 0;
     padding: 4px 0 0 0;
     font-size: 15px;
-    box-shadow: 0px 0px 7px -3px white;
+    box-shadow: 0px 0px 7px -2px rgb(19, 18, 18);
 }
 
 button:hover {
