@@ -164,6 +164,36 @@ h1 {
         max-width: 600px;
         display: block;
 
+            .button:hover {
+                background: #0F3055;
+            }
+
+        .vote-box {    
+            vertical-align: top;
+
+
+            .vote {
+                margin-top: 20px;
+
+
+            }
+        }
+
+        .bill {
+            display: inline-block;
+            max-width: 400px;
+        }
+
+        .created {
+            background: #0F3055;
+            border-radius: 10px;
+            border: 1px solid #091A2C;
+            display: inline-block;
+            padding: 10px 10px;
+            font-size: 15px;
+            box-shadow: 0px 0px 7px -2px #131212;
+        }
+
         .green {
             color: green;
         }
@@ -176,7 +206,7 @@ h1 {
 
 /////////    BUTTONS    /////////
 
-button {
+.button {
     width: 70px;
     height: 70px;
     text-align: center;
@@ -190,7 +220,7 @@ button {
     box-shadow: 0px 0px 7px -2px rgb(19, 18, 18);
 }
 
-button:hover {
+.button:hover {
     background: rgb(33, 84, 128);
 }
 
