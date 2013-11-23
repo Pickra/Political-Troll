@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/d50385a7.main.css">
+        <link rel="stylesheet" href="styles/0f938461.main.css">
         <script src="scripts/vendor/f7f27360.modernizr.js"></script>
     </head>
     <body>
@@ -22,9 +22,9 @@
         <span class="title">Politi Troll</span>
         
         <div class="logo-wrap">
-            <img class="logo" src="images/13b848a9.Placeholder-Troll.png">
-            <img src="images/b0ce0033.whitehouse.png" class="white-house">
-            <img class="logo" src="images/9d365c5b.Placeholder-Troll-flipped.png">
+            <img class="logo" src="images/728231cf.Placeholder-Troll.png">
+            <img src="images/cfd28c64.whitehouse.png" class="white-house">
+            <img class="logo" src="images/978d6eef.Placeholder-Troll-flipped.png">
         </div>
 
         <div class="main"></div>
@@ -97,7 +97,7 @@
                     </select>
                     
                     <a href="#B">
-                        <button>Submit</button>
+                        <button class="button">Submit</button>
                     </a>
 
                 </div>
@@ -110,7 +110,7 @@
             </h1>
 
             <a href="">
-                <button>Back</button>
+                <button class="button">Back</button>
             </a>
 
             <div class="members-view"></div>
@@ -121,7 +121,7 @@
         <script type="text/template" id="view-C-template">
             <div class="head-wrap">
                 <span class="title">Politi Troll</span>
-                <img src="../images/13b848a9.Placeholder-Troll.png">
+                <img src="../images/728231cf.Placeholder-Troll.png">
             </div>
             <p>Pick your politician from<span><%=politician.get('state') %></span> in District<%= politician.get('district')%>
             </p>
@@ -137,29 +137,27 @@
             
             <div class="btn-wrap">
                 <a href="#B">
-                    <button>Previous</button>
+                    <button class="button">Previous</button>
                 </a>
 
                 <a href="">
-                    <button>Go Again</button>
+                    <button class="button">Go Again</button>
                 </a>
             </div>
         </script>
             
 <!-- member-template -->
-
-<!--       <script type="text/template" id="member-view-template">
-            <a href="#D" class="member-id" id='<%= member.get("person").id%>'><img src="http://www.govtrack.us/data/photos/<%=member.get('person').id %>-50px.jpeg"><%= member.get('person').name %></a>
-            </script> -->
-
-            <script type="text/template" id="member-view-template">
-                <a href="#D" class="member-id"><img src="http://www.govtrack.us/data/photos/<%=member.get('person').id %>-200px.jpeg"><p><%= member.get('person').name %></p></a>
-                </script> 
+        <script type="text/template" id="member-view-template">
+            <a href="#D" class="member-id"><img src="http://www.govtrack.us/data/photos/<%=member.get('person').id %>-200px.jpeg"><p><%= member.get('person').name %></p></a>
+        </script> 
 
 <!--  bill-template-->
         <script type="text/template" id="bill-view-template">
+            
+            <div class='vote-box button'>
+                <div class='vote <%= options.get('klass') %>'><%= options.get('option').value %></div>
+            </div>
             <div class='bill'><%= options.get('vote').question %></div>
-            <div class='vote <%= options.get('klass') %>'><%= options.get('option').value %></div>
             <div class='created'><%= options.get('created')%></div>
         </script>
 
