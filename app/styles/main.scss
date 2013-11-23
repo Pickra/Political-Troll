@@ -4,7 +4,7 @@
     height: 200px;
     width: 200px;
     display: inline-block;
-    margin: 0 0 -16px 0px;
+    margin: 0px 10px 0px;
 }
 
 @mixin wrap(){
@@ -12,6 +12,9 @@
     margin: 0 auto 15px;
     padding: 30px;
     background: #103F69;
+    display: inline-block;
+    border: 1px solid #091A2C;
+    box-shadow: 0px 0px 7px -2px #131212;
 }
 
 
@@ -39,12 +42,11 @@ body {
     }  
 
 .logo-wrap {
-    margin-bottom: -20px;
+    margin-bottom: -5px;
 }
 
 .white-house {
-    margin: -35px 0px -138px 0;
-    height: 400px;
+    height: 325px;
     width: 700px;
     display: inline-block;
 }
@@ -55,6 +57,8 @@ body {
     background-color: rgba(47, 122, 187, 0.5);
     border-radius: 6px;
     display: block;
+    border: 1px solid #091A2C;
+    box-shadow: 0px 0px 7px -2px #131212;
 }
 
 
@@ -63,7 +67,6 @@ h1 {
 }
 
 .viewA {
-    box-shadow: 0px 0px 7px -2px rgb(19, 18, 18);
 
     p {
     text-align: center;
@@ -121,7 +124,6 @@ h1 {
     padding: 30px;
     background: #103F69;
     width: 400px;
-    display: inline-block;
 
     p {
     text-align: center;
@@ -157,10 +159,10 @@ h1 {
     }
 
     .billView {
-           @include wrap;
-           display: inline-block;
-           text-align: left;
-            max-width: 600px;
+        @include wrap;
+        text-align: left;
+        max-width: 600px;
+        display: block;
 
         .green {
             color: green;
