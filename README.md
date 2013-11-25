@@ -1,6 +1,6 @@
 # Politi-Troll
 
-Politician's voting records should be easy find. Well, I'm working on it.
+Politician's voting records should be easy to find. Well, I'm working on it.
 
 This app allows you to easily see your state Senators + Representatives, pick one and see their voting record.
 
