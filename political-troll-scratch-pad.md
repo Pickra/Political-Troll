@@ -300,16 +300,7 @@ could link up everything in 1 function to link sound and movement w/time interva
 ###### add a keyword search functionality
 - every time u search it puts that term in a little bar like…
 	- http://moremobilerelations.com/   - does a nice job
-- and each key term filters/refines that search	
-
-
-
-
-# README ACKNOWLEDGMENTS
-- MASON
-- joe v
-- chosen plugin
-	- http://harvesthq.github.io/chosen/
+- and each key term filters/refines that search
 
 
 
@@ -391,7 +382,7 @@ to put in the name, pic, and vote info in the final view
 - ex: vote__question  - vote is the property, question is the value
 
 
-memberId is now the id for the <a> for the template(?)
+memberId is now the id for the a tag for the template(?)
 when u click on the member it routes you to viewD
 - need a route to viewD
 
@@ -467,3 +458,24 @@ now i have a new member views in viewB, starting @ line 60 in views
 - its being initialized. when its rendered, its appending the template, which is using/passing the model from the collection thru the template; and the property of the obj literal, in this case `member`, is how u call that model info into the template; like line 154 in index.
 - when the member view, specifically `.member-id`, a new viewD is instantiated
 
+
+# where I'm at 12/11/2013
+made progress on the timestamp. My solution was to cut up the string and rearrange...
+
+```
+var rawTime = this.model.get('created');
+
+var time = rawTime.slice(-8) + ' ' + rawTime.slice(5, 10) + " " + rawTime.slice(0, 4);
+
+ this.model.set({klass: color, time: time})
+```
+then I realized that was dumb. found [this](http://delete.me.uk/2005/03/iso8601.html). which led me on a wild goose chase and brought me back to [Date()](http://stackoverflow.com/questions/12498619/convert-iso-8601-time-date-into-plain-english)
+
+now I'm usin this 
+
+		var date = new Date(this.model.get('created')).toDateString();
+		var time = new Date(this.model.get('created')).toLocaleTimeString();
+
+		this.model.set({klass: color, time: time, date: date})
+		
+which is better, but still needs work
