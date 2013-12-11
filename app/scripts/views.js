@@ -66,6 +66,7 @@ MemberView = Backbone.View.extend({
 	}, 	
 
 	memberId: function(){
+		console.clear();
     	viewD = new ViewD({model: this.model});	
 	},
 })
@@ -120,11 +121,11 @@ var BillView = Backbone.View.extend({
 		    color = 'green';
 		}
 		else if (voteValue == 'Nay' || voteValue === 'No') {
-		    // $('.vote').css('color', 'red');
+		    // $('.vote').css('color', 'red'); 
 		    color = 'red';
 		}
 		    // console.log($('.vote').length + ' ' + voteValue);
-		    console.log($('.vote'))
+		    // console.log($('.vote'))
 
 		
 
@@ -135,19 +136,3 @@ var BillView = Backbone.View.extend({
 })
 
 
-
-
-// render: function(){
-// 		this.$el.append(this.template({options: this.model}));
-		
-// 		var voteValue = $('.vote').text();
-
-// 		if (voteValue === 'Yea' || voteValue === 'Aye') {
-// 		    $('.vote').css('color', 'green');
-// 		}
-// 		else if (voteValue == 'Nay' || voteValue === 'No') {
-// 		    $('.vote').css('color', 'red');
-
-// 		}
-// 		    console.log(voteValue);
-// 	},

@@ -9,5 +9,5 @@ This app allows you to easily see your state Senators + Representatives, pick on
 # next on the agenda
 - bring in all the JSONP, get around the 600 limit
 - lazy load function
-	- checkout `https://github.com/toddmotto/echo?utm_source=html5weekly&utm_medium=email`
 - keyword filter function
+- make the timestamp easier to read + styled

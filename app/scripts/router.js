@@ -35,7 +35,7 @@ PolitiTrollRouter = Backbone.Router.extend({
 
 		this.membersFromYourState.fetch({cache:true});
 
-		console.log('collection = ', this.membersFromYourState);
+		console.log('a collection of your state members = ', this.membersFromYourState);
 	},
 
 
