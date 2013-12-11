@@ -104,6 +104,7 @@ var BillView = Backbone.View.extend({
 	className: 'billView',
 
 	initialize: function(options){
+// 'options' is how you're passing the JSON properties thru the template
 		this.options = options;
 		$('.ViewD').append(this.$el);
 		
@@ -112,7 +113,9 @@ var BillView = Backbone.View.extend({
 	},
 
 	render: function(){
-		// 'option' is refering to a property in the JSONP
+// 'option' is refering to a property in the JSONP
+
+// Here is where the color of the vote is being established
 		var voteValue = this.model.get('option').value;
 		var color = '';
 
@@ -124,12 +127,18 @@ var BillView = Backbone.View.extend({
 		    // $('.vote').css('color', 'red'); 
 		    color = 'red';
 		}
-		    // console.log($('.vote').length + ' ' + voteValue);
-		    // console.log($('.vote'))
 
+
+// Here I am making the .created (when they voted) value to be ledgible
+		var rawTime = this.model.get('created');
+		var time = rawTime.slice(-8) + ' ' + rawTime.slice(5, 10) + " " + rawTime.slice(0, 4);
+
+		 // this.model.set();
+
+		// console.log(time);
 		
 
-		this.model.set('klass', color)
+		this.model.set({klass: color, time: time})
 		this.$el.append(this.template({options: this.model}));
 	},
 
