@@ -66,6 +66,7 @@ MemberView = Backbone.View.extend({
 	}, 	
 
 	memberId: function(){
+		console.clear();
     	viewD = new ViewD({model: this.model});	
 	},
 })
@@ -103,6 +104,7 @@ var BillView = Backbone.View.extend({
 	className: 'billView',
 
 	initialize: function(options){
+// 'options' is how you're passing the JSON properties thru the template
 		this.options = options;
 		$('.ViewD').append(this.$el);
 		
@@ -111,7 +113,9 @@ var BillView = Backbone.View.extend({
 	},
 
 	render: function(){
-		// 'option' is refering to a property in the JSONP
+// 'option' is refering to a property in the JSONP
+
+// Here is where the color of the vote is being established
 		var voteValue = this.model.get('option').value;
 		var color = '';
 
@@ -120,34 +124,18 @@ var BillView = Backbone.View.extend({
 		    color = 'green';
 		}
 		else if (voteValue == 'Nay' || voteValue === 'No') {
-		    // $('.vote').css('color', 'red');
+		    // $('.vote').css('color', 'red'); 
 		    color = 'red';
 		}
-		    // console.log($('.vote').length + ' ' + voteValue);
-		    console.log($('.vote'))
 
+
+// Here I am making the .created (when they voted) value to be ledgible
 		
+		var date = new Date(this.model.get('created')).toDateString();
+		var time = new Date(this.model.get('created')).toLocaleTimeString();
 
-		this.model.set('klass', color)
+		this.model.set({klass: color, time: time, date: date})
 		this.$el.append(this.template({options: this.model}));
 	},
 
 })
-
-
-
-
-// render: function(){
-// 		this.$el.append(this.template({options: this.model}));
-		
-// 		var voteValue = $('.vote').text();
-
-// 		if (voteValue === 'Yea' || voteValue === 'Aye') {
-// 		    $('.vote').css('color', 'green');
-// 		}
-// 		else if (voteValue == 'Nay' || voteValue === 'No') {
-// 		    $('.vote').css('color', 'red');
-
-// 		}
-// 		    console.log(voteValue);
-// 	},
