@@ -10,8 +10,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/0b95cf61.main.css">
-        <script src="scripts/vendor/f7f27360.modernizr.js"></script>
+        <!-- build:css(.tmp) styles/main.css -->
+        <link href="http://fonts.googleapis.com/css?family=Lekton:400,700,400italic|Exo" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/chosen.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -22,9 +28,9 @@
         <span class="title">Politi Troll</span>
         
         <div class="logo-wrap">
-            <img class="logo" src="images/728231cf.Placeholder-Troll.png">
-            <img src="images/cfd28c64.whitehouse.png" class="white-house">
-            <img class="logo" src="images/978d6eef.Placeholder-Troll-flipped.png">
+            <img class="logo" src="images/Placeholder-Troll.png">
+            <img src="images/whitehouse.png" class="white-house">
+            <img class="logo" src="images/Placeholder-Troll-flipped.png">
         </div>
 
         <div class="main"></div>
@@ -121,7 +127,7 @@
         <script type="text/template" id="view-C-template">
             <div class="head-wrap">
                 <span class="title">Politi Troll</span>
-                <img src="../images/728231cf.Placeholder-Troll.png">
+                <img src="../images/Placeholder-Troll.png">
             </div>
             <p>Pick your politician from<span><%=politician.get('state') %></span> in District<%= politician.get('district')%>
             </p>
@@ -155,15 +161,22 @@
         <script type="text/template" id="bill-view-template">
             
             <div class='vote-box button'>
-                <div class='vote <%= options.get('klass') %>'><%= options.get('option').value %></div>
+                <div class='vote <%= options.get('color') %>'><%= options.get('option').value %></div>
             </div>
             <div class='bill'><%= options.get('vote').question %></div>
-            <div class='created'><%= options.get('date')%></div>
             <div class='created'><%= options.get('time')%></div>
         </script>
 
 <!-- --------------------   SCRIPTS --------------------------------->
-        <script src="scripts/bf234a10.vendor.js"></script>
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/backbone/docs/js/jquery.lazyload.js"></script>
+        <script src="bower_components/chosen_v1.0.0/chosen.jquery.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -175,6 +188,12 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
-        <script src="scripts/0b7d9a9e.main.js"></script>
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <script src="scripts/models.js"></script>
+        <script src="scripts/collections.js"></script>
+        <script src="scripts/views.js"></script>
+        <script src="scripts/router.js"></script>
+        <!-- endbuild -->
 </body>
 </html>
