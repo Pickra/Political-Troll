@@ -469,13 +469,11 @@ var time = rawTime.slice(-8) + ' ' + rawTime.slice(5, 10) + " " + rawTime.slice(
 
  this.model.set({klass: color, time: time})
 ```
-then I realized that was dumb. found [this](http://delete.me.uk/2005/03/iso8601.html). which led me on a wild goose chase and brought me back to [Date()](http://stackoverflow.com/questions/12498619/convert-iso-8601-time-date-into-plain-english)
-
-now I'm usin this 
+then I realized that was dumb. I thought Date() was what I needed, but wasn't sure how to use it. found [this](http://delete.me.uk/2005/03/iso8601.html). which led me on a wild goose chase and eventually brought me back to [Date()](http://stackoverflow.com/questions/12498619/convert-iso-8601-time-date-into-plain-english), which was helpful and led me to...
 
 		var date = new Date(this.model.get('created')).toDateString();
 		var time = new Date(this.model.get('created')).toLocaleTimeString();
 
 		this.model.set({klass: color, time: time, date: date})
 		
-which is better, but still needs work
+which is better, but I think it needs refactoring and I'm having a 5 hour time difference from the json time and what's getting displayed in the app. IS THIS A GMT TO EST THING OR AM I DOING SOMETHING WRONG?

@@ -161,10 +161,9 @@
         <script type="text/template" id="bill-view-template">
             
             <div class='vote-box button'>
-                <div class='vote <%= options.get('klass') %>'><%= options.get('option').value %></div>
+                <div class='vote <%= options.get('color') %>'><%= options.get('option').value %></div>
             </div>
             <div class='bill'><%= options.get('vote').question %></div>
-            <div class='created'><%= options.get('date')%></div>
             <div class='created'><%= options.get('time')%></div>
         </script>
 
