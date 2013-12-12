@@ -84,7 +84,6 @@ ViewD = Backbone.View.extend({
 		$('.main').html('');
 		$('.main').append(this.$el);
 
-		// this.bills = new Bills([], {id: this.model.get('id')});
 		var bills = new Bills([], {id: this.model.get('person').id});
 		
 		bills.fetch({cache: true});
@@ -106,7 +105,7 @@ var BillView = Backbone.View.extend({
 	initialize: function(options){
 // 'options' is how you're passing the JSON properties thru the template
 		this.options = options;
-		$('.ViewD').append(this.$el);
+		$('.bills').append(this.$el);
 		
 
 		this.render();
