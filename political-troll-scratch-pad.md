@@ -474,6 +474,17 @@ then I realized that was dumb. I thought Date() was what I needed, but wasn't su
 		var date = new Date(this.model.get('created')).toDateString();
 		var time = new Date(this.model.get('created')).toLocaleTimeString();
 
+and i set it in the template with, klass has been changed to color. these r just properties with the above variables as the value
+	
 		this.model.set({klass: color, time: time, date: date})
 		
 which is better, but I think it needs refactoring and I'm having a 5 hour time difference from the json time and what's getting displayed in the app. IS THIS A GMT TO EST THING OR AM I DOING SOMETHING WRONG?
+
+- ANSWER = yes, this is a time difference thing.
+- the above code is over kill and not accomplishing what I want, which is to have the date and time to be easily readable 
+					
+		Day, Month, Year + HH:MM AM/PM
+what I'm going with now
+
+		var time = new Date(this.model.get('created'));
+but its still not right. I'm thinking i need to`.slice()` off the `GMT-0500 (EST)`, but it's not happnin at the moment
