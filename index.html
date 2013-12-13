@@ -140,6 +140,7 @@
         <script type="text/template" id="view-D-template">
             <img src="http://www.govtrack.us/data/photos/<%=member.get('person').id %>-200px.jpeg">
             <div class="member-name"><%= member.get('person').name%></div> 
+            <div class="bills"></div>
             
             <div class="btn-wrap">
                 <a href="#B">
@@ -150,6 +151,7 @@
                     <button class="button">Go Again</button>
                 </a>
             </div>
+
         </script>
             
 <!-- member-template -->
@@ -164,7 +166,7 @@
                 <div class='vote <%= options.get('color') %>'><%= options.get('option').value %></div>
             </div>
             <div class='bill'><%= options.get('vote').question %></div>
-            <div class='created'><%= options.get('time')%></div>
+            <div class='created'><%= options.get('time') %></div>
         </script>
 
 <!-- --------------------   SCRIPTS --------------------------------->
