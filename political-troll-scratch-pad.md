@@ -278,17 +278,15 @@ http://www.govtrack.us/data/photos/400003-100px.jpeg
 ~~sprite background, so ur just css background-position, javascript would say as long as the class is on then background position is where the picture u wan a use is x,y
 and then ud css or javascript animate. javascript is probably better
 could link up everything in 1 function to link sound and movement w/time interval~~
-
-
 ######maybe too much
 - the playfulness could overshadow how useful the app is
 
 
 #app stylings
-- blue palate. everything based off of the same blue, just varying shades
+- ~~blue palate. everything based off of the same blue, just varying shades~~
 - keep styling consistent. if there is border-radius on 1 thing, put it on all things
-- use a playful font, but not wild
-- reformat the politician template (viewB + C). img goes on top of the name. also, maybe set those views up as a grid to accommodate alotta views
+- ~~use a playful font, but not wild~~
+- ~~reformat the politician template (viewB + C). img goes on top of the name. also, maybe set those views up as a grid to accommodate alotta views~~
 
 # more app functions
 
@@ -352,19 +350,7 @@ could link up everything in 1 function to link sound and movement w/time interva
 	
 
 
- 
-
-### WTF
-if i use ```voter_vote```, which keeps track of all the voting, I'm going to get thousands of votes per person, which is going to be too hard to sort thru in the app. ```vote``` + ```bill``` don't filter search by person.
-
-- although, ```vote``` does have a ```related_bill``` field/param???????
-- key word search w/```q```? looking for ```yea```, ```nea``` , ```aye```, ```no``` 
-
-
 #what are my options for SORT??????? it only lists "created"!!!!
-
-
-
 
 
 # the role endpoint link 
@@ -460,7 +446,7 @@ now i have a new member views in viewB, starting @ line 60 in views
 
 
 # where I'm at 12/11/2013
-made progress on the timestamp. My solution was to cut up the string and rearrange...
+### made progress on the timestamp. My solution was to cut up the string and rearrange...
 
 ```
 var rawTime = this.model.get('created');
@@ -487,4 +473,14 @@ which is better, but I think it needs refactoring and I'm having a 5 hour time d
 what I'm going with now
 
 		var time = new Date(this.model.get('created'));
-but its still not right. I'm thinking i need to`.slice()` off the `GMT-0500 (EST)`, but it's not happnin at the moment
+but its still not right, cuz I'm getting the whole thing
+		
+		Fri Dec 13 2013 02:32:00 GMT-0500 (EST)
+. I'm thinking i need to`.slice()` off the `GMT-0500 (EST)`, but it's not happnin at the moment
+
+
+### getting around the 600 obj limit
+using offset=thenPutANumberHere starts you where that number is, but you still only get 600 objs
+
+####### set a global variable equal to the offest number, then increment it by 600 each time you make an ajax call
+- maybe do this with a `more bills` button?

@@ -66,7 +66,7 @@ MemberView = Backbone.View.extend({
 	}, 	
 
 	memberId: function(){
-		console.clear();
+		// console.clear();
     	viewD = new ViewD({model: this.model});	
 	},
 })
@@ -96,11 +96,11 @@ ViewD = Backbone.View.extend({
 })
 
 
-var BillView = Backbone.View.extend({
+BillView = Backbone.View.extend({
 
 	template:_.template($('#bill-view-template').text()),
 
-	className: 'billView',
+	className: 'billView lazy',
 
 	initialize: function(options){
 // 'options' is how you're passing the JSON properties thru the template
@@ -129,10 +129,11 @@ var BillView = Backbone.View.extend({
 
 
 // Here I am making the .created (when they voted) value to be ledgible
-		var time = new Date(this.model.get('created'));
-		console.log(time);
+		var time = new Date(this.model.get('created')).toString().slice(0, 25);
+
 
 		this.model.set({color: color, time: time})
+
 		this.$el.append(this.template({options: this.model}));
 	},
 
