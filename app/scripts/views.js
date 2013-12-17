@@ -129,8 +129,7 @@ BillView = Backbone.View.extend({
 
 
 // Here I am making the .created (when they voted) value to be ledgible
-		var time = new Date(this.model.get('created')).toString().slice(0, 25);
-
+		var time = new Date(this.model.get('created')).toString().slice(0, 25)
 
 		this.model.set({color: color, time: time})
 

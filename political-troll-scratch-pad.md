@@ -484,3 +484,22 @@ using offset=thenPutANumberHere starts you where that number is, but you still o
 
 ####### set a global variable equal to the offest number, then increment it by 600 each time you make an ajax call
 - maybe do this with a `more bills` button?
+
+
+### 'lazyload'
+$(document).scrollTop() + $(window).height() - 'whatever the height of BillView is' then append  BillView
+
+if $(document).scrollTop() + $(window).height() is greater than ' ', then display:none it
+
+tried - 
+```$(document).scroll(function(){
+var fromBottom = $(document).height() - ($(document).scrollTop() + $(window).height())
+if (fromBottom < 200) {
+  console.log('yo')
+ $('.bills').append('<div class="joe">' + $(".joe").length + '</div>')
+ }
+})
+```
+### keyword search
+- just use the api keyword search param `q=whatevrTheWordIs`
+- except that you have to get the users keyword into the ajax request
