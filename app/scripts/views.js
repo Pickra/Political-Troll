@@ -2,8 +2,6 @@ ViewA = Backbone.View.extend({
 	
 	template: _.template($('#view-A-template').text()),
 	
-	// tagName: 'a',
-	
 	className: 'viewA',
 
 	initialize: function(){
@@ -25,7 +23,6 @@ ViewB = Backbone.View.extend({
 
 	className: 'viewB',
 
-
 	initialize: function(options){
 		this.options = options;
 		$('.main').html('');
@@ -42,17 +39,16 @@ ViewB = Backbone.View.extend({
 })
 
 
-
 MemberView = Backbone.View.extend({
 
 	template: _.template($('#member-view-template').text()),
 	
-	// tagName: a,
+	tagName: 'a href= "#D"',
 
 	className: 'memberView',
 
 	events: {
-		'click .member-id'		:  'memberId'
+		'click'		:  'thisView'
 	},
 
 	initialize: function(options){
@@ -65,8 +61,7 @@ MemberView = Backbone.View.extend({
 		this.$el.append(this.template({member: this.model}));
 	}, 	
 
-	memberId: function(){
-		// console.clear();
+	thisView: function(){
     	viewD = new ViewD({model: this.model});	
 	},
 })
@@ -87,6 +82,7 @@ ViewD = Backbone.View.extend({
 		var bills = new Bills([], {id: this.model.get('person').id});
 		
 		bills.fetch({cache: true});
+		console.log('this dude\'bills', bills);
 		this.render();
 	},
 

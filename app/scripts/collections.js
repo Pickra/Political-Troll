@@ -15,22 +15,16 @@ StateMembers = Backbone.Collection.extend({
 	},
 
 	model: Member,
-
-	// console.log('new StateMembers', StateMembers),
 })
 
 
 Bills = Backbone.Collection.extend({
-
 	initialize: function(model, options){
 		
 		this.options = options;
-		
-		// console.log(model)
 
 		this.on('add', function(model){
 			new BillView({model: model})
-			// console.log('this model', model);
 		})
 	},
 
@@ -40,9 +34,19 @@ Bills = Backbone.Collection.extend({
 	},
 
 	url: function(){
-		console.log('this dude\'s id #', this.options.id);
+		// console.log('this dude\'s id #', this.options.id);
 		return "https://www.govtrack.us/api/v2/vote_voter/?person=" + this.options.id + "&limit=10&sort=-created&fields=option__value,created,vote__question&format=jsonp&callback=?"
 	},
 
 	model:Bill,
 })
+
+
+
+
+
+
+
+
+
+

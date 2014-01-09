@@ -502,4 +502,12 @@ if (fromBottom < 200) {
 ```
 ### keyword search
 - just use the api keyword search param `q=whatevrTheWordIs`
-- except that you have to get the users keyword into the ajax request
+~~~- except that you have to get the users keyword into the ajax request~~~
+
+
+# where I'm at 1/9/2014
+- trying to the memberView to be an `a tag`, instead of it's contents, but the Bill model is not getting passed thru the Bills collection… wtf???!??!?!??!
+
+- to do a `keyword search` i have to loop thru the array of bills returned, for each dude, looking for that keyword. then return the results to the DOM. This method will still have the object limit problem. this should be in the BillView?
+
+- still need to do the `lazy load` too! or i guess i can have the 600 objs w/hidden:overflow, startin w/the most recent, and then do a new request if they wana look further in time.
