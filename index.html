@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link href="http://fonts.googleapis.com/css?family=Lekton:400,700,400italic|Exo" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="styles/f94f4401.main.css">
+        <link rel="stylesheet" href="styles/733e3850.main.css">
         <script src="scripts/vendor/f7f27360.modernizr.js"></script>
     </head>
     <body>
@@ -100,7 +100,6 @@
                     <a href="#B">
                         <button class="button">Submit</button>
                     </a>
-
                 </div>
             </div>      
         </script>
@@ -109,44 +108,31 @@
         <script type="text/template" id="view-B-template">
             <h1 class="yo">These politicians are from <span class="state-goes-here"><%= options.state%>. Click on one to see how they vote.</span>
             </h1>
-
             <a href="">
                 <button class="button">Back</button>
             </a>
-
             <div class="members-view"></div>
             <hr>            
         </script>
 
-<!-- view-C-template 
-        <script type="text/template" id="view-C-template">
-            <div class="head-wrap">
-                <span class="title">Politi Troll</span>
-                <img src="../images/728231cf.Placeholder-Troll.png">
-            </div>
-            <p>Pick your politician from<span><%=politician.get('state') %></span> in District<%= politician.get('district')%>
-            </p>
-            <div class="politician-view">
-            </div>
-
-        </script> -->
-
 <!-- view-D-template  -->
         <script type="text/template" id="view-D-template">
             <img src="http://www.govtrack.us/data/photos/<%=member.get('person').id %>-200px.jpeg">
-            <div class="member-name"><%= member.get('person').name%></div> 
+            <div class="member-name"><%= member.get('person').name%></div>
+            <div class="keyword-search">
+                <label for="key-search">Keyword Search</label>
+                <input id="key-search">
+                <input type="button" value="DO IT!!!!!" id="search-btn">
+            </div>
             <div class="btn-wrap">
                 <a href="#B">
                     <button class="button">Previous</button>
                 </a>
-
                 <a href="">
                     <button class="button">Go Again</button>
                 </a>
             </div>
             <div class="bills"></div>
-            
-
         </script>
             
 <!-- member-template -->
@@ -167,16 +153,6 @@
 <!-- --------------------   SCRIPTS --------------------------------->
         <script src="scripts/bf234a10.vendor.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-
-        <script src="scripts/eac4ce21.main.js"></script>
+        <script src="scripts/9e75e415.main.js"></script>
 </body>
 </html>
