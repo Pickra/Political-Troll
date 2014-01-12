@@ -507,7 +507,22 @@ if (fromBottom < 200) {
 
 # where I'm at 1/9/2014
 - trying to the memberView to be an `a tag`, instead of it's contents, but the Bill model is not getting passed thru the Bills collection… wtf???!??!?!??!
+	- ### DONE
 
-- to do a `keyword search` i have to loop thru the array of bills returned, for each dude, looking for that keyword. then return the results to the DOM. This method will still have the object limit problem. this should be in the BillView?
+<br>  
+- ~~to do a `keyword search` i have to loop thru the array of bills returned, for each dude, looking for that keyword. then return the results to the DOM. This method will still have the object limit problem. this should be in the BillView?~~
 
-- still need to do the `lazy load` too! or i guess i can have the 600 objs w/hidden:overflow, startin w/the most recent, and then do a new request if they wana look further in time.
+use the bills +/or person endpoint w/`q=whatever` and make a new collection
+
+- still need `lazy load` function or i guess i can have the 600 objs w/hidden:overflow, startin w/the most recent, and then do a new request if they wana look further in time.
+
+- #### use [select2](http://ivaynberg.github.io/select2/) (it's like chosen but works w/remote data) and [underscore throttle](http://underscorejs.org/#throttle) to call a search function on the server, for the user input value in viewD. 
+	- so the user starts typing, and the above is used to provide autofill options
+
+			somthn like:
+						function searchBills (query) {
+						bills = $.get('http://someurl.com/bills?q=' + query, function(results){
+					
+							})
+						}
+	- then, based on the user's selection, a new collection is made; again using the `q=whatever` for the filtering/keyword search

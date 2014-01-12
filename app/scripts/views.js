@@ -74,6 +74,10 @@ ViewD = Backbone.View.extend({
 
 	className: 'ViewD',
 
+	events: {
+		'click #search-btn'		: 'search'
+	},
+
 	initialize: function(){
 
 		$('.main').html('');
@@ -88,6 +92,11 @@ ViewD = Backbone.View.extend({
 
 	render: function(){
 		this.$el.append(this.template({member: this.model}));
+	},
+
+	search: function(){
+
+
 	}
 })
 

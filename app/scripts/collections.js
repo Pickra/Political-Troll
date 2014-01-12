@@ -42,6 +42,14 @@ Bills = Backbone.Collection.extend({
 })
 
 
+// function searchBills (query) {
+// 	bills = $.get('http://someurl.com/bills?q=' + query, function(results){
+
+// 	}),
+	
+// }
+
+
 
 
 
